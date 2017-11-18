@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{984CB356-B992-441E-BF81-A36D1B30ADD0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharedToolBox.Domain</RootNamespace>
+    <AssemblyName>SharedToolBox.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Caracteristica.cs" />
+    <Compile Include="Composicao.cs" />
+    <Compile Include="Dominio.cs" />
+    <Compile Include="Entities\Categoria.cs" />
+    <Compile Include="Entities\Cidade.cs" />
+    <Compile Include="Entities\Condicao.cs" />
+    <Compile Include="Entities\Condominio.cs" />
+    <Compile Include="Entities\Contato.cs" />
+    <Compile Include="Entities\Emprestimo.cs" />
+    <Compile Include="Entities\Endereco.cs" />
+    <Compile Include="Entities\old\Cliente.cs" />
+    <Compile Include="Entities\old\Produto.cs" />
+    <Compile Include="Entities\Ferramenta.cs" />
+    <Compile Include="Entities\Funcionalidade.cs" />
+    <Compile Include="Interfaces\Repositories\IClienteRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IProdutoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\Services\IClienteService.cs" />
+    <Compile Include="Interfaces\Services\IProdutoService.cs" />
+    <Compile Include="Interfaces\Services\IServiceBase.cs" />
+    <Compile Include="Entities\Movimento.cs" />
+    <Compile Include="Entities\Ocorrencia.cs" />
+    <Compile Include="Entities\Perfil.cs" />
+    <Compile Include="Entities\Permissao.cs" />
+    <Compile Include="Marca.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ClienteService.cs" />
+    <Compile Include="Services\ProdutoService.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
+    <Compile Include="Entities\TipoContato.cs" />
+    <Compile Include="Entities\TipoOcorrencia.cs" />
+    <Compile Include="Entities\Transacao.cs" />
+    <Compile Include="Entities\UF.cs" />
+    <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="Subtipo.cs" />
+    <Compile Include="Tipo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Entities\SharedToolBoxClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,11 @@
+C:\Users\Thiago\Downloads\ProjetoModeloDDD.Application\ProjetoModeloDDD.Domain\bin\Debug\SharedToolBox.Domain.dll
+C:\Users\Thiago\Downloads\ProjetoModeloDDD.Application\ProjetoModeloDDD.Domain\bin\Debug\SharedToolBox.Domain.pdb
+C:\Users\Thiago\Downloads\ProjetoModeloDDD.Application\ProjetoModeloDDD.Domain\obj\Debug\SharedToolBox.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Thiago\Downloads\ProjetoModeloDDD.Application\ProjetoModeloDDD.Domain\obj\Debug\SharedToolBox.Domain.dll
+C:\Users\Thiago\Downloads\ProjetoModeloDDD.Application\ProjetoModeloDDD.Domain\obj\Debug\SharedToolBox.Domain.pdb
+C:\SharedToolBox\SharedToolBox.Application\SharedToolBox.Domain\bin\Debug\SharedToolBox.Domain.dll
+C:\SharedToolBox\SharedToolBox.Application\SharedToolBox.Domain\bin\Debug\SharedToolBox.Domain.pdb
+C:\SharedToolBox\SharedToolBox.Application\SharedToolBox.Domain\obj\Debug\SharedToolBox.Domain.csprojResolveAssemblyReference.cache
+C:\SharedToolBox\SharedToolBox.Application\SharedToolBox.Domain\obj\Debug\SharedToolBox.Domain.csproj.CoreCompileInputs.cache
+C:\SharedToolBox\SharedToolBox.Application\SharedToolBox.Domain\obj\Debug\SharedToolBox.Domain.dll
+C:\SharedToolBox\SharedToolBox.Application\SharedToolBox.Domain\obj\Debug\SharedToolBox.Domain.pdb
