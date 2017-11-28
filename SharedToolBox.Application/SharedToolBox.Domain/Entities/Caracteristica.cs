@@ -5,14 +5,14 @@ using System.Text;
 
 namespace SharedToolBox.Domain.Entities
 {
-    public class Tipo
+    public class Caracteristica
     {
         public int Codigo { get; set; }
 
-        public Categoria Categoria { get; set; }
+        public string Valor { get; set; }
 
-        public string Nome { get; set; }
+        public Ferramenta Ferramenta { get; set; }
 
-        public int Imagem { get; set; }
+        public Dominio Dominio { get; set; }
     }
 }

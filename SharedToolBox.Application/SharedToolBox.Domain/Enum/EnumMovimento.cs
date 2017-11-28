@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SharedToolBox.Domain.Entities
+namespace SharedToolBox.Domain.Enum
 {
-    public enum Movimento
+    public enum EnumMovimento
     {
         Retirada = 1,
         Devolução = 2

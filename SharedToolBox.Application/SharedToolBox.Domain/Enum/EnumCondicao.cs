@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SharedToolBox.Domain.Entities
+namespace SharedToolBox.Domain.Enum
 {
-    public enum Condicao
+    public enum EnumCondicao
     {
         /// <summary>
         /// Excelente

@@ -11,6 +11,8 @@ namespace SharedToolBox.Domain.Entities
 
         public Tipo Tipo { get; set; }
 
-        public int Imagem { get; set; }
+        public string PathImagem { get; set; }
+
+        public string Nome { get; set; }
     }
 }

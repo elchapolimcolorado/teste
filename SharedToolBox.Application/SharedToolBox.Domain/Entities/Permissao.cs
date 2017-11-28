@@ -14,5 +14,7 @@ namespace SharedToolBox.Domain.Entities
         public Perfil Perfil { get; set; }
 
         public int Codigo { get; set; }
+
+        public string Nome { get; set; }
     }
 }

@@ -5,12 +5,10 @@ using System.Text;
 
 namespace SharedToolBox.Domain.Entities
 {
-    public class Categoria
+    public class Dominio
     {
         public int Codigo { get; set; }
 
-        public string Nome { get; set; }
-
-        public string PathImagem { get; set; }
+        public int Descricao { get; set; }
     }
 }

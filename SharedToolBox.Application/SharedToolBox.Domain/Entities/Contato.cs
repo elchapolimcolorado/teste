@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SharedToolBox.Domain.Enum;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace SharedToolBox.Domain.Entities
     {
         public int Codigo { get; set; }
 
-        public TipoContato TipoContato { get; set; }
+        public EnumTipoContato TipoContato { get; set; }
 
         public string Valor { get; set; }
 

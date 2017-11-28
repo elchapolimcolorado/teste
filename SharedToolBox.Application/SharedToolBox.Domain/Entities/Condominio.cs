@@ -12,5 +12,15 @@ namespace SharedToolBox.Domain.Entities
         public Endereco Endereco { get; set; }
 
         public Contato Contato { get; set; }
+
+        public string Nome { get; set; }
+
+        public int QuantidadeUnidades { get; set; }
+
+        public Usuario Sindico { get; set; }
+
+        public Usuario Zelador { get; set; }
+
+        public Usuario UsuarioAdministrativo { get; set; }
     }
 }

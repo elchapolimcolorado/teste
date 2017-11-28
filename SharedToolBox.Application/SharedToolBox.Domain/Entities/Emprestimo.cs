@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using SharedToolBox.Domain.Enum;
+using System;
 
 namespace SharedToolBox.Domain.Entities
 {
@@ -11,10 +9,16 @@ namespace SharedToolBox.Domain.Entities
 
         public Usuario Usuario { get; set; }
 
-        public Movimento Movimento { get; set; }
+        public EnumMovimento Movimento { get; set; }
 
-        public Condicao Condicao { get; set; }
+        public EnumCondicao Condicao { get; set; }
 
         public Composicao Composicao { get; set; }
+
+        public DateTime DataEmprestimo { get; set; }
+
+        public DateTime DataPrevistaDevolucao { get; set; }
+
+        public DateTime DataDevolucao { get; set; }
     }
 }

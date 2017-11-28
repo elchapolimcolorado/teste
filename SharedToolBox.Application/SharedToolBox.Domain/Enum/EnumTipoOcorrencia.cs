@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SharedToolBox.Domain.Entities
+namespace SharedToolBox.Domain.Enum
 {
-    public enum TipoOcorrencia
+    public enum EnumTipoOcorrencia
     {
         Problema = 1,
         Perda = 2,

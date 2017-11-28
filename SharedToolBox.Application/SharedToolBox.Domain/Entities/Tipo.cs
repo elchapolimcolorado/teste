@@ -5,12 +5,14 @@ using System.Text;
 
 namespace SharedToolBox.Domain.Entities
 {
-    public class Marca
+    public class Tipo
     {
         public int Codigo { get; set; }
 
+        public Categoria Categoria { get; set; }
+
         public string Nome { get; set; }
 
-        public byte Imagem { get; set; }
+        public int PathImagem { get; set; }
     }
 }

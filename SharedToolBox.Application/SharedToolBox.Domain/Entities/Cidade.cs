@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using SharedToolBox.Domain.Enum;
 
 namespace SharedToolBox.Domain.Entities
 {
@@ -9,7 +6,7 @@ namespace SharedToolBox.Domain.Entities
     {
         public int Codigo { get; set; }
 
-        public UF UF { get; set; }
+        public EnumUF UF { get; set; }
 
         public string Nome { get; set; }
     }

@@ -17,11 +17,11 @@ namespace SharedToolBox.Domain.Entities
 
         public Subtipo Subtipo { get; set; }
 
-        public byte Imagem { get; set; }
+        public string PathImagem { get; set; }
 
-        public string ManualInstrucoes { get; set; }
+        public string PathManualInstrucoes { get; set; }
 
-        public string VideoExplicativo { get; set; }
+        public string PathVideoExplicativo { get; set; }
 
         public Marca Marca { get; set; }
 
