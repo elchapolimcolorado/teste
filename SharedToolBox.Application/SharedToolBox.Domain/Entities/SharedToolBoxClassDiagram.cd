@@ -204,7 +204,7 @@
     <Position X="13.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAgAAAAAAAAAAAAABAAAAAAAAEAAAA=</HashCode>
-      <FileName>Tipo.cs</FileName>
+      <FileName>Entities\Tipo.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Categoria" />
@@ -214,7 +214,7 @@
     <Position X="13.5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAQ=</HashCode>
-      <FileName>Subtipo.cs</FileName>
+      <FileName>Entities\Subtipo.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Tipo" />
@@ -224,7 +224,7 @@
     <Position X="13.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAABAAAAAAAAEAAAA=</HashCode>
-      <FileName>Marca.cs</FileName>
+      <FileName>Entities\Marca.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SharedToolBox.Domain.Entities.Composicao" Collapsed="true">
@@ -232,8 +232,8 @@
     <AssociationLine Name="Condominio" Type="SharedToolBox.Domain.Entities.Condominio" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="10.5" Y="4.75" />
-        <Point X="6.834" Y="4.75" Type="JumpStart" />
-        <Point X="6.667" Y="4.75" Type="JumpEnd" />
+        <Point X="6.427" Y="4.75" Type="JumpStart" />
+        <Point X="6.26" Y="4.75" Type="JumpEnd" />
         <Point X="3.688" Y="4.75" />
         <Point X="3.688" Y="5.5" />
       </Path>
@@ -248,7 +248,7 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAEAAYAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
-      <FileName>Composicao.cs</FileName>
+      <FileName>Entities\Composicao.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Condominio" />
@@ -256,7 +256,7 @@
       <Property Name="Condicao" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="SharedToolBox.Domain.Caracteristica" Collapsed="true">
+  <Class Name="SharedToolBox.Domain.Entities.Caracteristica" Collapsed="true">
     <Position X="8.75" Y="8.75" Width="1.5" />
     <AssociationLine Name="Ferramenta" Type="SharedToolBox.Domain.Entities.Ferramenta" FixedFromPoint="true" FixedToPoint="true">
       <Path>
@@ -266,25 +266,25 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAEAAQAAAAAAAAAACAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Caracteristica.cs</FileName>
+      <FileName>Entities\Caracteristica.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Ferramenta" />
       <Property Name="Dominio" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="SharedToolBox.Domain.Dominio" Collapsed="true">
+  <Class Name="SharedToolBox.Domain.Entities.Dominio" Collapsed="true">
     <Position X="13.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Dominio.cs</FileName>
+      <FileName>Entities\Dominio.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SharedToolBox.Domain.Configuracao" Collapsed="true">
-    <Position X="15.5" Y="1" Width="1.5" />
+  <Class Name="SharedToolBox.Domain.Entities.Configuracao" Collapsed="true">
+    <Position X="15.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Configuracao.cs</FileName>
+      <HashCode>AAEAAAAAAQAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Configuracao.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="SharedToolBox.Domain.Entities.UF" Collapsed="true">

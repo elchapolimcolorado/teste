@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Página de Confirmação de Registro";
+
+    string message = "";
+    var confirmationToken = Request["confirmationCode"];
+
+    WebSecurity.Logout();
+    if (!confirmationToken.IsEmpty()) {
+        if (WebSecurity.ConfirmAccount(confirmationToken)) {
+            message = "Registro confirmado! Clique na guia de logon para fazer logon no site.";
+        } else {
+            message = "Não foi possível confirmar suas informações de registro.";
+        }
+    }
+}
+
+<hgroup class="title">
+    <h1>@Page.Title.</h1>
+    <h2>Use o formulário abaixo para confirmar sua conta.</h2>
+</hgroup>
+
+@if (!message.IsEmpty()) {
+    <p>@message</p>
+} else {
+    <form method="post">
+        <fieldset>
+            <legend>Código de Confirmação</legend>
+            <ol>
+                <li>
+                    <label for="confirmationCode">Código de confirmação</label>
+                    <input type="text" id="confirmationCode" name="confirmationCode" />
+                </li>
+            </ol>
+            <input type="submit" value="Confirmar" />
+        </fieldset>
+    </form>
+}

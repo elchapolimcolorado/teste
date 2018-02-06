@@ -30,9 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Caracteristica.cs" />
-    <Compile Include="Composicao.cs" />
-    <Compile Include="Dominio.cs" />
+    <Compile Include="Entities\Configuracao.cs" />
+    <Compile Include="Entities\Caracteristica.cs" />
+    <Compile Include="Entities\Composicao.cs" />
+    <Compile Include="Entities\Dominio.cs" />
     <Compile Include="Entities\Categoria.cs" />
     <Compile Include="Entities\Cidade.cs" />
     <Compile Include="Entities\Condicao.cs" />
@@ -54,7 +55,7 @@
     <Compile Include="Entities\Ocorrencia.cs" />
     <Compile Include="Entities\Perfil.cs" />
     <Compile Include="Entities\Permissao.cs" />
-    <Compile Include="Marca.cs" />
+    <Compile Include="Entities\Marca.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ClienteService.cs" />
     <Compile Include="Services\ProdutoService.cs" />
@@ -64,8 +65,8 @@
     <Compile Include="Entities\Transacao.cs" />
     <Compile Include="Entities\UF.cs" />
     <Compile Include="Entities\Usuario.cs" />
-    <Compile Include="Subtipo.cs" />
-    <Compile Include="Tipo.cs" />
+    <Compile Include="Entities\Subtipo.cs" />
+    <Compile Include="Entities\Tipo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Entities\SharedToolBoxClassDiagram.cd" />

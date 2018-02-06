@@ -1,0 +1,135 @@
+﻿@* Remova esta seção se estiver usando agrupamento *@
+@section Scripts {
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Registrar";
+
+    // Inicializar variáveis gerais da página
+    var email = "";
+    var password = "";
+    var confirmPassword = "";
+
+    // Configurar validação
+    Validation.RequireField("email", "Você deve especificar um endereço de email.");
+    Validation.RequireField("password", "A senha não pode ficar em branco.");
+    Validation.Add("confirmPassword",
+        Validator.EqualsTo("password", "A senha e a confirmação de senha não correspondem."));
+    Validation.Add("password",
+        Validator.StringLength(
+            maxLength: Int32.MaxValue,
+            minLength: 6,
+            errorMessage: "A senha deve ter pelo menos 6 caracteres"));
+
+    // Se essa for uma solicitação POST, valide e processe os dados
+    if (IsPost) {
+        AntiForgery.Validate();
+        email = Request.Form["email"];
+        password = Request.Form["password"];
+        confirmPassword = Request.Form["confirmPassword"];
+
+        // Valide a resposta captcha do usuário
+        // if (!ReCaptcha.Validate("PRIVATE_KEY")) {
+        //     ModelState.AddError("recaptcha", "A resposta captcha está incorreta");
+        // }
+
+        // Se todas as informações forem válidas, crie uma nova conta
+        if (Validation.IsValid()) {
+            // Insira um novo usuário no banco de dados
+            var db = Database.Open("StarterSite");
+
+            // Verifique se o usuário já existe
+            var user = db.QuerySingle("SELECT Email FROM UserProfile WHERE LOWER(Email) = LOWER(@0)", email);
+            if (user == null) {
+                // Insira o email na tabela de perfil
+                db.Execute("INSERT INTO UserProfile (Email) VALUES (@0)", email);
+
+                // Crie e associe uma nova entrada no banco de dados de associação.
+                // Caso tenha êxito, continue processando a solicitação
+                try {
+                    bool requireEmailConfirmation = !WebMail.SmtpServer.IsEmpty();
+                    var token = WebSecurity.CreateAccount(email, password, requireEmailConfirmation);
+                    if (requireEmailConfirmation) {
+                        var hostUrl = Request.Url.GetComponents(UriComponents.SchemeAndServer, UriFormat.Unescaped);
+                        var confirmationUrl = hostUrl + VirtualPathUtility.ToAbsolute("~/Account/Confirm?confirmationCode=" + HttpUtility.UrlEncode(token));
+
+                        WebMail.Send(
+                            to: email,
+                            subject: "Confirme sua conta",
+                            body: "Seu código de confirmação é: " + token + ". Visit <a href=\"" + confirmationUrl + "\">" + confirmationUrl + "</a> para ativar sua conta."
+                        );
+                    }
+
+                    if (requireEmailConfirmation) {
+                        // Agradeça ao usuário por se registrar e informe que um email será enviado
+                        Response.Redirect("~/Account/Thanks");
+                    } else {
+                        // Volte para a página inicial e saia
+                        WebSecurity.Login(email, password);
+
+                        Response.Redirect("~/");
+                    }
+                } catch (System.Web.Security.MembershipCreateUserException e) {
+                    ModelState.AddFormError(e.Message);
+                }
+            } else {
+                // O usuário já existe
+                ModelState.AddFormError("Email address is already in use.");
+            }
+        }
+    }
+}
+
+<hgroup class="title">
+    <h1>@Page.Title.</h1>
+    <h2>Criar uma nova conta.</h2>
+</hgroup>
+
+<form method="post">
+    @AntiForgery.GetHtml()
+    @* Se houver pelo menos um erro de validação, notifique o usuário *@
+    @Html.ValidationSummary("A criação da conta não foi bem-sucedida. Corrija os erros e tente novamente.", excludeFieldErrors: true, htmlAttributes: null)
+
+    <fieldset>
+        <legend>Formulário de registro</legend>
+        <ol>
+            <li class="email">
+                <label for="email" @if(!ModelState.IsValidField("email")){<text>class="error-label"</text>}>Endereço de email</label>
+                <input type="text" id="email" name="email" value="@email" @Validation.For("email") />
+                @* Grave todos os erros de validação de email na página *@
+                @Html.ValidationMessage("email")
+            </li>
+            <li class="password">
+                <label for="password" @if(!ModelState.IsValidField("password")) {<text>class="error-label"</text>}>Senha</label>
+                <input type="password" id="password" name="password" @Validation.For("password") />
+                @* Grave todos os erros de validação de senha na página *@
+                @Html.ValidationMessage("password")
+            </li>
+            <li class="confirm-password">
+                <label for="confirmPassword" @if(!ModelState.IsValidField("confirmPassword")) {<text>class="error-label"</text>}>Confirmar senha</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" @Validation.For("confirmPassword") />
+                @* Grave todos os erros de validação de senha na página *@
+                @Html.ValidationMessage("confirmPassword")
+            </li>
+            <li class="recaptcha">
+                <div class="message-info">
+                    <p>
+                        Para ativar a verificação CAPTCHA, <a href="http://go.microsoft.com/fwlink/?LinkId=204140">instale a 
+                        ASP.NET Web Helpers Library</a> e exclua comentários ReCaptcha.GetHtml e substitua a 'PUBLIC_KEY'
+                        por sua chave pública. Na parte superior desta página, exclua os comentários de ReCaptcha. Validate e
+                        substitua a 'PRIVATE_KEY' por sua chave privada.
+                        Inscreva-se para chaves de reCAPTCHA em <a href="http://recaptcha.net">reCAPTCHA.net</a>.
+                    </p>
+                </div>
+                @*
+                @ReCaptcha.GetHtml("PUBLIC_KEY", theme: "white")
+                @Html.ValidationMessage("recaptcha")
+                *@
+            </li>
+        </ol>
+        <input type="submit" value="Registrar" />
+    </fieldset>
+</form>

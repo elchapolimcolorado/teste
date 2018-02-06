@@ -1,0 +1,116 @@
+﻿@{
+    ViewBag.Title = "MeusLugares";
+    Layout = "~/Views/Shared/_layoutMaster.cshtml";
+    @model SoftFramework.Web.Models.MercadoLivre.AtualizarVariacaoListagemModel
+}
+@section scripts
+{
+    <script type="text/javascript" src="~/assets/js/application/produto/alterar-quantidade.js"></script>
+    <!-- iCheck -->
+    <script src="~/assets/vendors/iCheck/icheck.min.js"></script>
+}
+    <style>
+        .table-responsive td, .table-responsive th {
+            text-align: center
+        }
+    </style>
+
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Variações <small>Abaixo todas as variações do produto selecionado</small></h3>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="clearfix"></div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h3>Produto: @Model.NomeProduto</h3>
+                            <div class="clearfix"></div>
+                            <div class="ln_solid"></div>
+                            <div class="form-group">
+                                <label class="control-label col-md-1" for="nome-produto">
+                                    <h2>Lista de Variações</h2>
+                                </label>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <br />
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Cor Principal</th>
+                                        <th>Cor secundária</th>
+                                        <th>Tamanho</th>
+                                        <th>Preço</th>
+                                        <th>Quantidade</th>
+                                        <th class=" col-sm-1">Nova Qtd.</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach (var item in Model.Variacoes.OrderBy(x=>x.CorPrincipal).ThenBy(x=>x.CorSecundaria).ThenBy(x=>x.IndexTamanho))
+                                    {
+                                        <tr>
+                                            <td>@item.Id</td>
+                                            <td>@item.CorPrincipal</td>
+                                            <td>@item.CorSecundaria</td>
+                                            <td>@item.Tamanho</td>
+                                            <td>@item.Preco</td>
+                                            <td class="col-qtd">@item.QuantidadeDisponivel</td>
+                                            <td class="col-sm-1">
+                                                @*<a href="#" class="atualizar" data-id-variacao="@item.IdVariacaoMercadoLivre">Alterar Quantidade</a>*@
+                                                @*<a href="#">Inativar</a>*@
+                                                <input type="text"
+                                                    data-id-ml="@item.IdVariacaoMercadoLivre"
+                                                       class="txt-alterar form-control" onkeypress="return window.main.somenteNumeros(this);" maxlength="4">
+                                            </td>
+                                        </tr>
+                                    }
+                                    </tbody>
+                                </table>
+                            </div>
+                            <br/>
+                            <div class="ln_solid"></div>
+                            <div class="form-group">
+                                <div class="col-md-2 col-md-offset-10">
+                                    <a href="~/Produto/Index" class="btn btn-default">Voltar</a>
+                                    <a href="#" id="salvar" class="btn btn-success">Salvar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-alterar-qtd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <input type="hidden" id="id-variacao-alterar" />
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Atualização de Quantidade</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="qtd">Nova Quantidade</label>
+                            <input type="email" class="form-control" id="qtd" placeholder="Quantidade de Produtos atualizada">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="atualizar-qtd">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>

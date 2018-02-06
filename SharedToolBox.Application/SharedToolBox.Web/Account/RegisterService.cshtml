@@ -1,0 +1,113 @@
+﻿@* Remova esta seção se estiver usando agrupamento *@
+@section Scripts {
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Registrar";
+
+    string email = "";
+    string loginData = "";
+    string providerDisplayName = "";
+
+    var returnUrl = Request.QueryString["ReturnUrl"];
+    if (returnUrl.IsEmpty()) {
+        // Alguns provedores de logon externos requerem sempre um valor URL de retorno
+        returnUrl = Href("~/");
+    }
+
+    // Configurar validação
+    Validation.RequireField("email", "O campo nome de usuário é obrigatório.");
+
+    if (IsPost && Request.Form["newAccount"].AsBool()) {
+        // Trata o formulário de registro de nova conta
+        AntiForgery.Validate();
+        email = Request.Form["email"];
+        loginData = Request.Form["loginData"];
+
+        string provider = "";
+        string providerUserId = "";
+        if (WebSecurity.IsAuthenticated || !OAuthWebSecurity.TryDeserializeProviderUserId(loginData, out provider, out providerUserId)) {
+            Response.Redirect("~/Account/Manage");
+            return;
+        }
+
+        providerDisplayName = OAuthWebSecurity.GetOAuthClientData(provider).DisplayName;
+        if (Validation.IsValid()) {
+            // Insira um novo usuário ao banco de dados
+            var db = Database.Open("StarterSite");
+
+            // Verifique se o usuário já existe
+            var user = db.QuerySingle("SELECT Email FROM UserProfile WHERE LOWER(Email) = LOWER(@0)", email);
+            if (user == null) {
+                // Insira o email na tabela de perfis
+                db.Execute("INSERT INTO UserProfile (Email) VALUES (@0)", email);
+                OAuthWebSecurity.CreateOrUpdateAccount(provider, providerUserId, email);
+
+                OAuthWebSecurity.Login(provider, providerUserId, createPersistentCookie: false);
+
+                Context.RedirectLocal(returnUrl);
+                return;
+            } else {
+                ModelState.AddError("email", "O nome de usuário já existe. Insira um nome de usuário diferente.");
+            }
+        }
+    } else {
+        // Trata dos retornos de chamada do provedor de logon externo
+
+        var result = OAuthWebSecurity.VerifyAuthentication(Href("~/Account/RegisterService", new { returnUrl }));
+        if (result.IsSuccessful) {
+            bool registered = OAuthWebSecurity.Login(result.Provider, result.ProviderUserId, createPersistentCookie: false);
+            if (registered) {
+                Context.RedirectLocal(returnUrl);
+                return;
+            }
+
+            if (WebSecurity.IsAuthenticated) {
+                // Se o usuário atual estiver conectado adiciona a nova conta
+                OAuthWebSecurity.CreateOrUpdateAccount(result.Provider, result.ProviderUserId, WebSecurity.CurrentUserName);
+                Context.RedirectLocal(returnUrl);
+                return;
+            } else {
+                // O usuário é novo, define o nome de usuário padrão para o valor obtido do provedor de logon externo
+                email = result.UserName;
+                loginData = OAuthWebSecurity.SerializeProviderUserId(result.Provider, result.ProviderUserId);
+                providerDisplayName = OAuthWebSecurity.GetOAuthClientData(result.Provider).DisplayName;
+            }
+        } else {
+            Response.Redirect("~/Account/ExternalLoginFailure");
+            return;
+        }
+    }
+}
+<hgroup class="title">
+    <h1>@Page.Title.</h1>
+    <h2>Associe a sua conta @providerDisplayName.</h2>
+</hgroup>
+
+<form method="post">
+    @AntiForgery.GetHtml()
+    <input type="hidden" name="loginData" value="@loginData" />
+    @* Mesmo que exista apenas um erro de validação, informe o usuário *@
+    @Html.ValidationSummary(excludeFieldErrors: true)
+
+    <fieldset>
+        <legend>Formulário de registro</legend>
+        <p>
+            Você se autenticou com sucesso com o <strong>@providerDisplayName</strong>. Insira
+            um nome de usuário para este site abaixo e clique no botão confirmar para finalizar o logon
+            .
+        </p>
+        <ol>
+            <li class="email">
+                <label for="email" @if (!ModelState.IsValidField("email")) {<text>class="error-label"</text>}>Endereço de email</label>
+                <input type="text" id="email" name="email" value="@email" @Validation.For("email") />
+                @* Escreva quaisquer erros de validação de email nesta página *@
+                @Html.ValidationMessage("email")
+            </li>
+        </ol>
+        <button type="submit" name="newAccount" value="true">Registrar</button>
+    </fieldset>
+</form>

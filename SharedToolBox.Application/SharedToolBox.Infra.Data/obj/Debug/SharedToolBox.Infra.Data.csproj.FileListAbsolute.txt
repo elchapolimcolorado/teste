@@ -24,3 +24,16 @@ C:\SharedToolBox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\Sh
 C:\SharedToolBox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.csproj.CoreCompileInputs.cache
 C:\SharedToolBox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.dll
 C:\SharedToolBox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.pdb
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\bin\Debug\SharedToolBox.Infra.Data.dll.config
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\bin\Debug\SharedToolBox.Infra.Data.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\bin\Debug\SharedToolBox.Infra.Data.pdb
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\bin\Debug\EntityFramework.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\bin\Debug\SharedToolBox.Domain.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\bin\Debug\SharedToolBox.Domain.pdb
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\bin\Debug\EntityFramework.xml
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.csprojResolveAssemblyReference.cache
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.csproj.CoreCompileInputs.cache
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.pdb
