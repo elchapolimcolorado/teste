@@ -82,7 +82,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AgAAABAQAQBBCAAAAAQAAAAAIAEAABAEBAAAQoEBAAA=</HashCode>
+      <HashCode>AgAAABAQAQBBCAAAAAQAAAAAIAAAABAEBAAAQoEBAAA=</HashCode>
       <FileName>Entities\Ferramenta.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -213,7 +213,7 @@
   <Class Name="SharedToolBox.Domain.Entities.Subtipo" Collapsed="true">
     <Position X="13.5" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAQ=</HashCode>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAABAAAAAAAAEAAAQ=</HashCode>
       <FileName>Entities\Subtipo.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -276,7 +276,7 @@
   <Class Name="SharedToolBox.Domain.Entities.Dominio" Collapsed="true">
     <Position X="13.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Entities\Dominio.cs</FileName>
     </TypeIdentifier>
   </Class>

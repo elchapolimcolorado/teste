@@ -13,8 +13,6 @@ namespace SharedToolBox.Domain.Entities
 
         public string Descricao { get; set; }
 
-        public string Cor { get; set; }
-
         public Subtipo Subtipo { get; set; }
 
         public byte Imagem { get; set; }
@@ -24,25 +22,5 @@ namespace SharedToolBox.Domain.Entities
         public string VideoExplicativo { get; set; }
 
         public Marca Marca { get; set; }
-
-        public string CaracteristicaTecnica { get; set; }
-
-        public string ComposicaoMaterial { get; set; }
-
-        public string Embalagem { get; set; }
-
-        public string CodigoFornecedor { get; set; }
-
-        public string EAN { get; set; }
-
-        public string Acabamento { get; set; }
-
-        public string Voltagem { get; set; }
-
-        public string Alimentacao { get; set; }
-
-        public string IndicacaoUso { get; set; }
-
-        public string TipoEncaixe { get; set; }
     }
 }

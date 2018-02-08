@@ -45,8 +45,13 @@
     <Compile Include="Entities\old\Produto.cs" />
     <Compile Include="Entities\Ferramenta.cs" />
     <Compile Include="Entities\Funcionalidade.cs" />
-    <Compile Include="Interfaces\Repositories\IClienteRepository.cs" />
-    <Compile Include="Interfaces\Repositories\IProdutoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IDominioRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ITipoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ISubtipoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IMarcaRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IFerramentaRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ICaracteristicaRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ICategoriaRepository.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
     <Compile Include="Interfaces\Services\IClienteService.cs" />
     <Compile Include="Interfaces\Services\IProdutoService.cs" />

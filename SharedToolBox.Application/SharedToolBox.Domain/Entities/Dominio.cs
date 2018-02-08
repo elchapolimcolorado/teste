@@ -7,20 +7,8 @@ namespace SharedToolBox.Domain.Entities
 {
     public class Dominio
     {
-        public int Codigo
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
+        public int Codigo { get; set; }
 
-        public int Descricao
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
+        public string Nome { get; set; }
     }
 }

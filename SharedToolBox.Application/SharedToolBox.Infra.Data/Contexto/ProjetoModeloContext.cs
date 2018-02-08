@@ -15,8 +15,14 @@ namespace SharedToolBox.Infra.Data.Contexto
             
         }
 
-        public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Categoria> Categoria { get; set; }
+        public DbSet<Tipo> Tipo { get; set; }
+        public DbSet<Subtipo> Subtipo { get; set; }
+        public DbSet<Domain.Entities.Marca> Marca { get; set; }
+        public DbSet<Ferramenta> Ferramenta { get; set; }
+        public DbSet<Caracteristica> Caracteristica { get; set; }
+        public DbSet<Dominio> Dominio { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
