@@ -37,3 +37,6 @@ D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.csproj.CoreCompileInputs.cache
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.pdb
+C:\SharedToolBox\git\teste\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.csprojResolveAssemblyReference.cache
+C:\SharedToolBox\git\teste\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.dll
+C:\SharedToolBox\git\teste\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.pdb

@@ -5,8 +5,9 @@ namespace SharedToolBox.Domain.Interfaces.Repositories
 {
     public interface IFerramentaRepository : IRepositoryBase<Ferramenta>
     {
-        IEnumerable<Produto> BuscarPorNome(string nome);
-        IEnumerable<Produto> BuscarPorDescricao(string descricao);
+        IEnumerable<Ferramenta> BuscarPorNome(string nome);
+        IEnumerable<Ferramenta> BuscarPorDescricao(string descricao);
+
     }
 }
 
