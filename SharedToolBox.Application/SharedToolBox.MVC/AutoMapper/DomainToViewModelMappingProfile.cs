@@ -14,8 +14,7 @@ namespace SharedToolBox.MVC.AutoMapper
 
         protected override void Configure()
         {
-            Mapper.CreateMap<ClienteViewModel, Cliente>();
-            Mapper.CreateMap<ProdutoViewModel, Produto>();
+            Mapper.CreateMap<CategoriaViewModel, Categoria>();
         }
     }
 }

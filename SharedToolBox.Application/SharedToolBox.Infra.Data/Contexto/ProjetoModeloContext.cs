@@ -18,7 +18,7 @@ namespace SharedToolBox.Infra.Data.Contexto
         public DbSet<Categoria> Categoria { get; set; }
         public DbSet<Tipo> Tipo { get; set; }
         public DbSet<Subtipo> Subtipo { get; set; }
-        public DbSet<Domain.Entities.Marca> Marca { get; set; }
+        public DbSet<Marca> Marca { get; set; }
         public DbSet<Ferramenta> Ferramenta { get; set; }
         public DbSet<Caracteristica> Caracteristica { get; set; }
         public DbSet<Dominio> Dominio { get; set; }
@@ -40,8 +40,13 @@ namespace SharedToolBox.Infra.Data.Contexto
             modelBuilder.Properties<string>()
                 .Configure(p => p.HasMaxLength(100));
 
-            modelBuilder.Configurations.Add(new ClienteConfiguration());
-            modelBuilder.Configurations.Add(new ProdutoConfiguration());
+            modelBuilder.Configurations.Add(new CategoriaConfiguration());
+            modelBuilder.Configurations.Add(new TipoConfiguration());
+            modelBuilder.Configurations.Add(new SubtipoConfiguration());
+            modelBuilder.Configurations.Add(new MarcaConfiguration());
+            modelBuilder.Configurations.Add(new FerramentaConfiguration());
+            modelBuilder.Configurations.Add(new CaracteristicaConfiguration());
+            modelBuilder.Configurations.Add(new DominioConfiguration());
         }
 
         public override int SaveChanges()

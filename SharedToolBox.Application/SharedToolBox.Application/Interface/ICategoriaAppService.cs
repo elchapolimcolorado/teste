@@ -1,12 +1,11 @@
-﻿using System;
+﻿using SharedToolBox.Domain.Entities;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SharedToolBox.Application.Interface
 {
-    class ICategoriaAppService
+    public interface ICategoriaAppService : IAppServiceBase<Categoria>
     {
+        //IEnumerable<Categoria> ObterClientesEspeciais();
+        //IEnumerable<Categoria> BuscarPorNome(string nome);
     }
 }

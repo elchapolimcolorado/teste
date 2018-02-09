@@ -70,16 +70,13 @@ namespace SharedToolBox.MVC.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind(typeof(IAppServiceBase<>)).To(typeof(AppServiceBase<>));
-            kernel.Bind<IClienteAppService>().To<ClienteAppService>();
-            kernel.Bind<IProdutoAppService>().To<ProdutoAppService>();
+            kernel.Bind<ICategoriaAppService>().To<CategoriaAppService>();
 
             kernel.Bind(typeof(IServiceBase<>)).To(typeof(ServiceBase<>));
-            kernel.Bind<IClienteService>().To<ClienteService>();
-            kernel.Bind<IProdutoService>().To<ProdutoService>();
+            kernel.Bind<ICategoriaService>().To<CategoriaService>();
 
             kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<>));
-            kernel.Bind<IClienteRepository>().To<ClienteRepository>();
-            kernel.Bind<IProdutoRepository>().To<ProdutoRepository>();
+            kernel.Bind<ICategoriaRepository>().To<CategoriaRepository>();
         }        
     }
 }
