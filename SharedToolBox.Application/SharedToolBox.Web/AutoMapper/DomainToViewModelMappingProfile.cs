@@ -14,11 +14,7 @@ namespace SharedToolBox.Web.AutoMapper
 
         public DomainToViewModelMappingProfile()
         {
-            Mapper.Initialize(cfg => 
-            {
-                cfg.CreateMap<CategoriaViewModel, Categoria>();
-            });
-
+            var map = new MapperConfiguration(cfg => { cfg.CreateMap<CategoriaViewModel, Categoria>(); });
         }
     }
 }
