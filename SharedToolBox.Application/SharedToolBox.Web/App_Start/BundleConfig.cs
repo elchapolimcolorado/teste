@@ -1,6 +1,6 @@
 ﻿using System.Web.Optimization;
 
-namespace SharedToolBox.MVC
+namespace SharedToolBox.Web
 {
     public class BundleConfig
     {

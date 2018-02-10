@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace SharedToolBox.MVC.AutoMapper
+namespace SharedToolBox.Web.AutoMapper
 {
     public class AutoMapperConfig
     {

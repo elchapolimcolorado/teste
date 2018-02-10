@@ -95,3 +95,17 @@ D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\
 C:\SharedToolBox\git\teste\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.csprojResolveAssemblyReference.cache
 C:\SharedToolBox\git\teste\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.dll
 C:\SharedToolBox\git\teste\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.pdb
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\Ninject.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\Ninject.Web.Common.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\Ninject.Web.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SharedToolBox.Application.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SharedToolBox.Domain.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SharedToolBox.Infra.Data.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\WebActivatorEx.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SharedToolBox.Application.pdb
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SharedToolBox.Domain.pdb
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SharedToolBox.Infra.Data.pdb
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SharedToolBox.Infra.Data.dll.config
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\Ninject.xml
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\Ninject.Web.xml
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\Ninject.Web.Common.xml

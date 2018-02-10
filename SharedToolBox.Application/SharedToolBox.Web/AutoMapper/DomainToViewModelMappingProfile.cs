@@ -1,9 +1,9 @@
 ﻿
 using AutoMapper;
 using SharedToolBox.Domain.Entities;
-using SharedToolBox.MVC.ViewModels;
+using SharedToolBox.Web.ViewModels;
 
-namespace SharedToolBox.MVC.AutoMapper
+namespace SharedToolBox.Web.AutoMapper
 {
     public class DomainToViewModelMappingProfile : Profile
     {
@@ -12,9 +12,13 @@ namespace SharedToolBox.MVC.AutoMapper
             get { return "ViewModelToDomainMappings"; }
         }
 
-        protected override void Configure()
+        public DomainToViewModelMappingProfile()
         {
-            Mapper.CreateMap<CategoriaViewModel, Categoria>();
+            Mapper.Initialize(cfg => 
+            {
+                cfg.CreateMap<CategoriaViewModel, Categoria>();
+            });
+
         }
     }
 }

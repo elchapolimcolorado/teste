@@ -1,15 +1,7 @@
-using SharedToolBox.Application;
-using SharedToolBox.Application.Interface;
-using SharedToolBox.Domain.Interfaces.Repositories;
-using SharedToolBox.Domain.Interfaces.Services;
-using SharedToolBox.Domain.Services;
-using SharedToolBox.Infra.Data.Repositories;
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(SharedToolBox.Web.App_Start.NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethod(typeof(SharedToolBox.Web.App_Start.NinjectWebCommon), "Stop")]
 
-
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(SharedToolBox.MVC.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(SharedToolBox.MVC.App_Start.NinjectWebCommon), "Stop")]
-
-namespace SharedToolBox.MVC.App_Start
+namespace SharedToolBox.Web.App_Start
 {
     using System;
     using System.Web;
@@ -30,7 +22,7 @@ namespace SharedToolBox.MVC.App_Start
         {
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
-            //bootstrapper.Initialize(CreateKernel);
+            bootstrapper.Initialize(CreateKernel);
         }
         
         /// <summary>
@@ -69,14 +61,6 @@ namespace SharedToolBox.MVC.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind(typeof(IAppServiceBase<>)).To(typeof(AppServiceBase<>));
-            kernel.Bind<ICategoriaAppService>().To<CategoriaAppService>();
-
-            kernel.Bind(typeof(IServiceBase<>)).To(typeof(ServiceBase<>));
-            kernel.Bind<ICategoriaService>().To<CategoriaService>();
-
-            kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<>));
-            kernel.Bind<ICategoriaRepository>().To<CategoriaRepository>();
         }        
     }
 }
