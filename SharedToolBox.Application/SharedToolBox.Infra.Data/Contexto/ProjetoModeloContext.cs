@@ -2,26 +2,28 @@
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
+using MySql.Data.Entity;
 using SharedToolBox.Domain.Entities;
 using SharedToolBox.Infra.Data.EntityConfig;
 
 namespace SharedToolBox.Infra.Data.Contexto
 {
+    [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class ProjetoModeloContext : DbContext
     {
         public ProjetoModeloContext()
-            : base("SharedToolBox")
+            : base("Server=localhost;Database=SharedToolBoxDB;Uid=root;Pwd=123456;")
         {
             
         }
 
         public DbSet<Categoria> Categoria { get; set; }
-        public DbSet<Tipo> Tipo { get; set; }
-        public DbSet<Subtipo> Subtipo { get; set; }
-        public DbSet<Marca> Marca { get; set; }
-        public DbSet<Ferramenta> Ferramenta { get; set; }
-        public DbSet<Caracteristica> Caracteristica { get; set; }
-        public DbSet<Dominio> Dominio { get; set; }
+        //public DbSet<Tipo> Tipo { get; set; }
+        //public DbSet<Subtipo> Subtipo { get; set; }
+        //public DbSet<Marca> Marca { get; set; }
+        //public DbSet<Ferramenta> Ferramenta { get; set; }
+        //public DbSet<Caracteristica> Caracteristica { get; set; }
+        //public DbSet<Dominio> Dominio { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -41,12 +43,12 @@ namespace SharedToolBox.Infra.Data.Contexto
                 .Configure(p => p.HasMaxLength(100));
 
             modelBuilder.Configurations.Add(new CategoriaConfiguration());
-            modelBuilder.Configurations.Add(new TipoConfiguration());
-            modelBuilder.Configurations.Add(new SubtipoConfiguration());
-            modelBuilder.Configurations.Add(new MarcaConfiguration());
-            modelBuilder.Configurations.Add(new FerramentaConfiguration());
-            modelBuilder.Configurations.Add(new CaracteristicaConfiguration());
-            modelBuilder.Configurations.Add(new DominioConfiguration());
+            //modelBuilder.Configurations.Add(new TipoConfiguration());
+            //modelBuilder.Configurations.Add(new SubtipoConfiguration());
+            //modelBuilder.Configurations.Add(new MarcaConfiguration());
+            //modelBuilder.Configurations.Add(new FerramentaConfiguration());
+            //modelBuilder.Configurations.Add(new CaracteristicaConfiguration());
+            //modelBuilder.Configurations.Add(new DominioConfiguration());
         }
 
         public override int SaveChanges()

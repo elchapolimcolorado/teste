@@ -109,3 +109,5 @@ D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\Shared
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\Ninject.xml
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\Ninject.Web.xml
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\Ninject.Web.Common.xml
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\MySql.Data.Entity.EF6.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\MySql.Data.dll
