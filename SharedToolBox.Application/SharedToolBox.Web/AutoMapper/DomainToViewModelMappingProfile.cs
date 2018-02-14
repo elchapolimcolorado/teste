@@ -1,7 +1,6 @@
-﻿
-using AutoMapper;
+﻿using AutoMapper;
 using SharedToolBox.Domain.Entities;
-using SharedToolBox.Web.ViewModels;
+using SharedToolBox.Web.Models;
 
 namespace SharedToolBox.Web.AutoMapper
 {
