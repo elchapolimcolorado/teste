@@ -13,6 +13,10 @@ namespace SharedToolBox.Web.App_Start
     using SharedToolBox.Application;
     using SharedToolBox.Application.Interface;
     using SharedToolBox.CrossCutting.InversionOfControl;
+    using SharedToolBox.Domain.Interfaces.Repositories;
+    using SharedToolBox.Domain.Interfaces.Services;
+    using SharedToolBox.Domain.Services;
+    using SharedToolBox.Infra.Data.Repositories;
 
     public static class NinjectWebCommon 
     {
@@ -42,10 +46,10 @@ namespace SharedToolBox.Web.App_Start
         /// <returns>The created kernel.</returns>
         private static IKernel CreateKernel()
         {
-            var ioc = new IoC();
-            var kernel = ioc.Kernel;
-            
-            //var kernel = new StandardKernel();
+            //var ioc = new IoC();
+            //var kernel = ioc.Kernel;
+
+            var kernel = new StandardKernel();
             try
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
@@ -67,7 +71,14 @@ namespace SharedToolBox.Web.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            //kernel.Bind<ICategoriaAppService>().To<CategoriaAppService>();
+            kernel.Bind(typeof(IAppServiceBase<>)).To(typeof(AppServiceBase<>));
+            kernel.Bind<ICategoriaAppService>().To<CategoriaAppService>();
+
+            kernel.Bind(typeof(IServiceBase<>)).To(typeof(ServiceBase<>));
+            kernel.Bind<ICategoriaService>().To<CategoriaService>();
+
+            kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<>));
+            kernel.Bind<ICategoriaRepository>().To<CategoriaRepository>();
         }        
     }
 }
