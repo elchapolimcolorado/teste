@@ -10,6 +10,9 @@ namespace SharedToolBox.Web.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using SharedToolBox.Application;
+    using SharedToolBox.Application.Interface;
+    using SharedToolBox.CrossCutting.InversionOfControl;
 
     public static class NinjectWebCommon 
     {
@@ -39,7 +42,10 @@ namespace SharedToolBox.Web.App_Start
         /// <returns>The created kernel.</returns>
         private static IKernel CreateKernel()
         {
-            var kernel = new StandardKernel();
+            var ioc = new IoC();
+            var kernel = ioc.Kernel;
+            
+            //var kernel = new StandardKernel();
             try
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
@@ -61,6 +67,7 @@ namespace SharedToolBox.Web.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            //kernel.Bind<ICategoriaAppService>().To<CategoriaAppService>();
         }        
     }
 }

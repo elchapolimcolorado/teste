@@ -111,3 +111,10 @@ D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.csproj.CoreCompileInputs.cache
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.pdb
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SharedToolBox.CrossCutting.InversionOfControl.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\Microsoft.Practices.ServiceLocation.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\CommonServiceLocator.NinjectAdapter.Unofficial.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SharedToolBox.CrossCutting.InversionOfControl.pdb
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SharedToolBox.CrossCutting.InversionOfControl.dll.config
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\Microsoft.Practices.ServiceLocation.xml

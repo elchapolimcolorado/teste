@@ -12,6 +12,11 @@ namespace SharedToolBox.Web.Controllers
     {
         private readonly ICategoriaAppService _categoriaApp;
 
+        //public CategoriaController()
+        //{
+
+        //}
+
         public CategoriaController(ICategoriaAppService categoriaApp)
         {
             _categoriaApp = categoriaApp;
