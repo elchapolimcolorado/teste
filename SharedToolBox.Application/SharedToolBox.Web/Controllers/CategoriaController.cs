@@ -25,7 +25,8 @@ namespace SharedToolBox.Web.Controllers
         // GET: Categoria
         public ActionResult Index()
         {
-            var model = Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.GetAll());
+            var aa = _categoriaApp.GetAll();
+            var model = Mapper.Map<IEnumerable<CategoriaViewModel>>(_categoriaApp.GetAll());
             return View(model);
         }
 

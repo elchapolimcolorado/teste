@@ -1,10 +1,9 @@
-D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\obj\Debug\SharedToolBox.CrossCutting.InversionOfControl.csprojResolveAssemblyReference.cache
-D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\obj\Debug\SharedToolBox.CrossCutting.InversionOfControl.csproj.CoreCompileInputs.cache
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\SharedToolBox.CrossCutting.InversionOfControl.dll.config
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\SharedToolBox.CrossCutting.InversionOfControl.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\SharedToolBox.CrossCutting.InversionOfControl.pdb
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\CommonServiceLocator.NinjectAdapter.Unofficial.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\EntityFramework.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\EntityFramework.SqlServer.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\Microsoft.Web.Infrastructure.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\Ninject.dll
@@ -21,12 +20,13 @@ D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.I
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\SharedToolBox.Infra.Data.pdb
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\SharedToolBox.Infra.Data.dll.config
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\EntityFramework.xml
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\Microsoft.Practices.ServiceLocation.xml
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\Ninject.xml
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\Ninject.Web.Common.xml
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\Ninject.Web.Mvc.xml
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\obj\Debug\SharedToolBox.CrossCutting.InversionOfControl.csprojResolveAssemblyReference.cache
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\obj\Debug\SharedToolBox.CrossCutting.InversionOfControl.csproj.CoreCompileInputs.cache
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\obj\Debug\SharedToolBox.CrossCutting.InversionOfControl.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\obj\Debug\SharedToolBox.CrossCutting.InversionOfControl.pdb
-D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\EntityFramework.SqlServer.dll
-D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.CrossCutting.InversionOfControl\bin\Debug\EntityFramework.SqlServer.xml
