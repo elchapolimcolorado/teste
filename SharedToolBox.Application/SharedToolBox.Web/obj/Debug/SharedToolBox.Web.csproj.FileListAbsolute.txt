@@ -1,8 +1,6 @@
 C:\SharedToolBox\git\teste\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.csprojResolveAssemblyReference.cache
 C:\SharedToolBox\git\teste\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.dll
 C:\SharedToolBox\git\teste\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.pdb
-D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.csprojResolveAssemblyReference.cache
-D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.csproj.CoreCompileInputs.cache
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\ApplicationInsights.config
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SharedToolBox.Web.dll.config
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SharedToolBox.Web.dll
@@ -120,5 +118,7 @@ D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\pt-br\
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\pt-br\Microsoft.Owin.Security.Google.resources.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\pt-br\Microsoft.Owin.Security.Twitter.resources.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\pt-br\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.csprojResolveAssemblyReference.cache
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.csproj.CoreCompileInputs.cache
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.pdb

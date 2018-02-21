@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using SharedToolBox.Domain.Entities;
 using SharedToolBox.Web.Models;
+using System.Collections.Generic;
 
 namespace SharedToolBox.Web.AutoMapper
 {
@@ -8,12 +9,24 @@ namespace SharedToolBox.Web.AutoMapper
     {
         public override string ProfileName
         {
-            get { return "ViewModelToDomainMappings"; }
+            get { return "DomainToViewModelMappings"; }
         }
 
         public DomainToViewModelMappingProfile()
         {
-            var map = new MapperConfiguration(cfg => { cfg.CreateMap<CategoriaViewModel, Categoria>(); });
+            var config = new MapperConfiguration(cfg => {
+                cfg.CreateMap<Categoria, CategoriaViewModel>()
+                    .ForMember(d => d.Codigo, o => o.MapFrom(s => s.Codigo))
+                    .ForMember(d => d.Nome, o => o.MapFrom(s => s.Nome))
+                    .ForMember(d => d.Imagem, o => o.MapFrom(s => s.Imagem))
+                    .ForMember(d => d.DataCadastro, o => o.Ignore())
+                    .ForMember(d => d.Ativo, o => o.Ignore());
+            });
+
+
+                
+
+            //var map = new MapperConfiguration(cfg => { cfg.CreateMap<Categoria, CategoriaViewModel>(); });
         }
     }
 }

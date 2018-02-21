@@ -1,7 +1,7 @@
 ﻿@{
     ViewBag.Title = "Categoria";
     Layout = "~/Views/Shared/_layoutMaster.cshtml";
-    @model SharedToolBox.Web.Models.CategoriaModel
+    @model IEnumerable<SharedToolBox.Web.Models.CategoriaViewModel>
 }
 @section scripts
 {
@@ -19,7 +19,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Categorias <small>Abaixo todos as categorias de produtos</small></h3>
+                <h3>Categorias</h3>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -43,7 +43,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach (var item in Model.Itens)
+                                @foreach (var item in Model)
                                 {
                                     <tr>
                                         <td>@item.Nome</td>

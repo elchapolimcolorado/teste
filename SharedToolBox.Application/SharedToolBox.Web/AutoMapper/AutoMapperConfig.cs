@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using SharedToolBox.Domain.Entities;
+using SharedToolBox.Web.Models;
 
 namespace SharedToolBox.Web.AutoMapper
 {
@@ -8,8 +10,13 @@ namespace SharedToolBox.Web.AutoMapper
         {
             Mapper.Initialize(x =>
             {
-                x.AddProfile<DomainToViewModelMappingProfile>();
-                x.AddProfile<ViewModelToDomainMappingProfile>();
+                x.CreateMap<Categoria, CategoriaViewModel>()
+                    .ForMember(d => d.DataCadastro, o => o.Ignore())
+                    .ForMember(d => d.Ativo, o => o.Ignore())
+                    .ReverseMap();
+
+                //x.AddProfile<DomainToViewModelMappingProfile>();
+                //x.AddProfile<ViewModelToDomainMappingProfile>();
             });
         }
     }
