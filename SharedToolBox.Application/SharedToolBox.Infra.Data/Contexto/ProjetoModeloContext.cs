@@ -12,13 +12,13 @@ namespace SharedToolBox.Infra.Data.Contexto
     public class ProjetoModeloContext : DbContext
     {
         public ProjetoModeloContext()
-            : base("Server=localhost;Database=SharedToolBoxDB;Uid=root;Pwd=123456;")
+            : base("Server=localhost; Database=SharedToolBoxDB; Uid=root; Pwd=123456;")
         {
             
         }
 
         public DbSet<Categoria> Categoria { get; set; }
-        //public DbSet<Tipo> Tipo { get; set; }
+        public DbSet<Tipo> Tipo { get; set; }
         //public DbSet<Subtipo> Subtipo { get; set; }
         //public DbSet<Marca> Marca { get; set; }
         //public DbSet<Ferramenta> Ferramenta { get; set; }
@@ -43,7 +43,7 @@ namespace SharedToolBox.Infra.Data.Contexto
                 .Configure(p => p.HasMaxLength(100));
 
             modelBuilder.Configurations.Add(new CategoriaConfiguration());
-            //modelBuilder.Configurations.Add(new TipoConfiguration());
+            modelBuilder.Configurations.Add(new TipoConfiguration());
             //modelBuilder.Configurations.Add(new SubtipoConfiguration());
             //modelBuilder.Configurations.Add(new MarcaConfiguration());
             //modelBuilder.Configurations.Add(new FerramentaConfiguration());
@@ -53,16 +53,16 @@ namespace SharedToolBox.Infra.Data.Contexto
 
         public override int SaveChanges()
         {
-            foreach (var entry in ChangeTracker.Entries().Where(entry => entry.Entity.GetType().GetProperty("DataCadastro") != null))
+            foreach (var entry in ChangeTracker.Entries().Where(entry => entry.Entity.GetType().GetProperty("DataManipulacao") != null))
             {
                 if (entry.State == EntityState.Added)
                 {
-                    entry.Property("DataCadastro").CurrentValue = DateTime.Now;
+                    entry.Property("DataManipulacao").CurrentValue = DateTime.Now;
                 }
 
                 if (entry.State == EntityState.Modified)
                 {
-                    entry.Property("DataCadastro").IsModified = false;
+                    entry.Property("DataManipulacao").IsModified = false;
                 }
             }
             return base.SaveChanges();

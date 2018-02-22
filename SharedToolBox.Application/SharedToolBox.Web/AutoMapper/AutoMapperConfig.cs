@@ -10,13 +10,7 @@ namespace SharedToolBox.Web.AutoMapper
         {
             Mapper.Initialize(x =>
             {
-                x.CreateMap<Categoria, CategoriaViewModel>()
-                    .ForMember(d => d.DataCadastro, o => o.Ignore())
-                    .ForMember(d => d.Ativo, o => o.Ignore())
-                    .ReverseMap();
-
-                //x.AddProfile<DomainToViewModelMappingProfile>();
-                //x.AddProfile<ViewModelToDomainMappingProfile>();
+                x.CreateMap<Categoria, CategoriaViewModel>().ReverseMap();
             });
         }
     }

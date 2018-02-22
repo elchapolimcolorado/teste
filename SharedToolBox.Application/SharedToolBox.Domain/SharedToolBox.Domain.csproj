@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Entities\Base\EntityBase.cs" />
     <Compile Include="Entities\Configuracao.cs" />
     <Compile Include="Entities\Caracteristica.cs" />
     <Compile Include="Entities\Composicao.cs" />

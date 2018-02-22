@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SharedToolBox.Domain.Entities
 {
-    public class Tipo
+    public class Tipo : EntityBase
     {
         public int Codigo { get; set; }
 
@@ -13,6 +13,6 @@ namespace SharedToolBox.Domain.Entities
 
         public string Nome { get; set; }
 
-        public int Imagem { get; set; }
+        public string Imagem { get; set; }
     }
 }

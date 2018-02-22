@@ -61,14 +61,15 @@
     <Compile Include="EntityConfig\MarcaConfiguration.cs" />
     <Compile Include="EntityConfig\SubtipoConfiguration.cs" />
     <Compile Include="EntityConfig\TipoConfiguration.cs" />
-    <Compile Include="Migrations\201802131736090_201802131458_Categoria.cs" />
-    <Compile Include="Migrations\201802131736090_201802131458_Categoria.Designer.cs">
-      <DependentUpon>201802131736090_201802131458_Categoria.cs</DependentUpon>
+    <Compile Include="Migrations\201802220307346_20180221231300_Categoria.cs" />
+    <Compile Include="Migrations\201802220307346_20180221231300_Categoria.Designer.cs">
+      <DependentUpon>201802220307346_20180221231300_Categoria.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoriaRepository.cs" />
     <Compile Include="Repositories\RespositoryBase.cs" />
+    <Compile Include="Repositories\TipoRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SharedToolBox.Domain\SharedToolBox.Domain.csproj">
@@ -85,8 +86,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201802131736090_201802131458_Categoria.resx">
-      <DependentUpon>201802131736090_201802131458_Categoria.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802220307346_20180221231300_Categoria.resx">
+      <DependentUpon>201802220307346_20180221231300_Categoria.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

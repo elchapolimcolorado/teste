@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SharedToolBox.Domain.Entities
 {
-    public class Caracteristica
+    public class Caracteristica : EntityBase
     {
         public int Codigo { get; set; }
 

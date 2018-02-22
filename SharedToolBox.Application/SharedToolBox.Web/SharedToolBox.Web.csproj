@@ -79,15 +79,6 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject.Web, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.Web.3.2.1.0\lib\net45-full\Ninject.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
-    </Reference>
     <Reference Include="SimpleInjector, Version=4.0.12.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.4.0.12\lib\net45\SimpleInjector.dll</HintPath>
     </Reference>
@@ -224,16 +215,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\MapperWebProfile.cs" />
-    <Compile Include="App_Start\NinjectWeb.cs" />
-    <Compile Include="App_Start\NinjectWebCommon.cs" />
-    <Compile Include="App_Start\Old\IdentityConfig.cs" />
-    <Compile Include="App_Start\Old\Startup.Auth.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="App_Start\WindsorControllerFactory.cs" />
     <Compile Include="AutoMapper\AutoMapperConfig.cs" />
-    <Compile Include="AutoMapper\DomainToViewModelMappingProfile.cs" />
-    <Compile Include="AutoMapper\ViewModelToDomainMappingProfile.cs" />
     <Compile Include="Controllers\Base\BaseController.cs" />
     <Compile Include="Controllers\Base\BaseGridController.cs" />
     <Compile Include="Controllers\Base\ExternaController.cs" />
@@ -242,9 +229,6 @@
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\Old\AccountController.cs" />
-    <Compile Include="Controllers\Old\HomeController.cs" />
-    <Compile Include="Controllers\Old\ManageController.cs" />
     <Compile Include="Controllers\ProdutoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -270,9 +254,9 @@
     <Compile Include="Models\MercadoLivre\AtualizarVariacaoListagemModel.cs" />
     <Compile Include="Models\MercadoLivre\HomeModel.cs" />
     <Compile Include="Models\MercadoLivre\ProdutoModel.cs" />
-    <Compile Include="Models\Old\AccountViewModels.cs" />
-    <Compile Include="Models\Old\IdentityModels.cs" />
-    <Compile Include="Models\Old\ManageViewModels.cs" />
+    <Compile Include="Models\Login\AccountViewModels.cs" />
+    <Compile Include="Models\Login\IdentityModels.cs" />
+    <Compile Include="Models\Login\ManageViewModels.cs" />
     <Compile Include="Models\Resource\PortalResource.cs" />
     <Compile Include="Models\Resource\ResourceBase.cs" />
     <Compile Include="Models\Usuario\NovaPessoaViewModel.cs" />
@@ -3208,8 +3192,6 @@
     <Content Include="assets\vendors\validator\validator.html" />
     <Content Include="assets\vendors\validator\validator.js" />
     <Content Include="assets\vendors\validator\validator.min.js" />
-    <Content Include="Content\Old\bootstrap.css" />
-    <Content Include="Content\Old\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -3276,7 +3258,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Old\Site.css" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
@@ -6364,31 +6345,26 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Old\Shared\Error.cshtml" />
-    <Content Include="Views\Old\Shared\_Layout.cshtml" />
-    <Content Include="Views\Old\Home\About.cshtml" />
-    <Content Include="Views\Old\Home\Contact.cshtml" />
-    <Content Include="Views\Old\Home\Index.cshtml" />
-    <Content Include="Views\Old\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Old\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Old\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Old\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Old\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Old\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Old\Account\Login.cshtml" />
-    <Content Include="Views\Old\Account\Register.cshtml" />
-    <Content Include="Views\Old\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Old\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Old\Account\SendCode.cshtml" />
-    <Content Include="Views\Old\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Old\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Old\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Old\Manage\Index.cshtml" />
-    <Content Include="Views\Old\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Old\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Old\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Views\Old\Shared\Lockout.cshtml" />
-    <Content Include="Views\Old\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Cliente\MeusApps.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />

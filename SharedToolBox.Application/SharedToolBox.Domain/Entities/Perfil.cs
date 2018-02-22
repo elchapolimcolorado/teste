@@ -5,12 +5,10 @@ using System.Text;
 
 namespace SharedToolBox.Domain.Entities
 {
-    public class Perfil
+    public class Perfil : EntityBase
     {
         public int Codigo { get; set; }
 
         public string Nome { get; set; }
-
-        public bool Ativo { get; set; }
     }
 }

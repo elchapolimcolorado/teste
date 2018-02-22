@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace SharedToolBox.Web.ViewModels
+namespace SharedToolBox.Web.Models
 {
     public class ClienteViewModel
     {

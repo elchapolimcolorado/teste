@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SharedToolBox.Domain.Entities
 {
-    public class Emprestimo
+    public class Emprestimo : EntityBase
     {
         public int Codigo { get; set; }
 

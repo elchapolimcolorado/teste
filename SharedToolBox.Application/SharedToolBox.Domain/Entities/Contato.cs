@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SharedToolBox.Domain.Entities
 {
-    public class Contato
+    public class Contato : EntityBase
     {
         public int Codigo { get; set; }
 
@@ -15,6 +15,5 @@ namespace SharedToolBox.Domain.Entities
 
         public bool Preferencial { get; set; }
 
-        public bool Ativo { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SharedToolBox.Domain.Entities
 {
-    public class Permissao
+    public class Permissao : EntityBase
     {
         public Transacao Transacao { get; set; }
 

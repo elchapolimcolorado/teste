@@ -39,8 +39,8 @@ D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\bin
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\bin\Debug\EntityFramework.xml
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.csprojResolveAssemblyReference.cache
-D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.Migrations._201802131458_Categoria.resources
-D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.csproj.GenerateResource.Cache
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.csproj.CoreCompileInputs.cache
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.pdb
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.Migrations._20180221231300_Categoria.resources
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.csproj.GenerateResource.Cache

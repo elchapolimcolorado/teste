@@ -5,12 +5,12 @@ using System.Text;
 
 namespace SharedToolBox.Domain.Entities
 {
-    public class Marca
+    public class Marca : EntityBase
     {
         public int Codigo { get; set; }
 
         public string Nome { get; set; }
 
-        public byte Imagem { get; set; }
+        public string Imagem { get; set; }
     }
 }
