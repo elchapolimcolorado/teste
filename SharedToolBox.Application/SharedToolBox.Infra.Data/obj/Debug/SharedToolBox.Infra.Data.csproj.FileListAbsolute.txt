@@ -42,5 +42,5 @@ D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.csproj.CoreCompileInputs.cache
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.pdb
-D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.Migrations._20180221231300_Categoria.resources
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.Migrations.categoria.resources
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Infra.Data\obj\Debug\SharedToolBox.Infra.Data.csproj.GenerateResource.Cache

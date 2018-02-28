@@ -6,6 +6,6 @@
 
         public string Nome { get; set; }
 
-        public byte Imagem { get; set; }
+        public byte[] Imagem { get; set; }
     }
 }

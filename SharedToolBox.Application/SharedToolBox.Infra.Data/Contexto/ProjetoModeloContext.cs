@@ -33,7 +33,7 @@ namespace SharedToolBox.Infra.Data.Contexto
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
             modelBuilder.Properties()
-                .Where(p => p.Name == p.ReflectedType.Name + "Id")
+                .Where(p => p.Name == p.ReflectedType.Name + "Codigo")
                 .Configure(p => p.IsKey());
 
             modelBuilder.Properties<string>()
@@ -42,8 +42,8 @@ namespace SharedToolBox.Infra.Data.Contexto
             modelBuilder.Properties<string>()
                 .Configure(p => p.HasMaxLength(100));
 
-            //modelBuilder.Properties<byte>()
-            //    .Configure(p => p.HasColumnType("blob"));
+            modelBuilder.Properties<byte[]>()
+                .Configure(p => p.HasColumnType("blob"));
 
             modelBuilder.Configurations.Add(new CategoriaConfiguration());
             //modelBuilder.Configurations.Add(new TipoConfiguration());

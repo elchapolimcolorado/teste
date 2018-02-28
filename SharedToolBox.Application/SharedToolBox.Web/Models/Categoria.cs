@@ -1,12 +1,14 @@
 using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SharedToolBox.Web.Models
 {
     public class CategoriaViewModel
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Codigo { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo Nome")]
@@ -16,7 +18,7 @@ namespace SharedToolBox.Web.Models
 
         [Required(ErrorMessage = "Selecione uma imagem")]
         [DisplayName("Imagem")]
-        public byte Imagem { get; set; }
+        public byte[] Imagem { get; set; }
 
         [ScaffoldColumn(false)]
         public DateTime DataManipulacao { get; set; }

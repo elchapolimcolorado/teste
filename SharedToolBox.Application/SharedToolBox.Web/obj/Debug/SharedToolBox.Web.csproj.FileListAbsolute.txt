@@ -1,8 +1,6 @@
 C:\SharedToolBox\git\teste\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.csprojResolveAssemblyReference.cache
 C:\SharedToolBox\git\teste\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.dll
 C:\SharedToolBox\git\teste\SharedToolBox.Application\SharedToolBox.Web\obj\Debug\SharedToolBox.Web.pdb
-D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\System.Web.Mvc.dll
-D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\System.Web.Optimization.xml
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\ApplicationInsights.config
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SharedToolBox.Web.dll.config
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SharedToolBox.Web.dll
@@ -45,6 +43,7 @@ D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\Simple
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SimpleInjector.Integration.Web.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SimpleInjector.Integration.Web.Mvc.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\System.Web.Helpers.dll
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\System.Web.Mvc.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\System.Web.Optimization.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\System.Web.Razor.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\System.Web.WebPages.Deployment.dll
@@ -77,6 +76,7 @@ D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\Simple
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\SimpleInjector.Integration.Web.Mvc.xml
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\System.Web.Helpers.xml
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\System.Web.Mvc.xml
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\System.Web.Optimization.xml
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\System.Web.Razor.xml
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\System.Web.WebPages.xml
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Web\bin\System.Web.WebPages.Deployment.xml

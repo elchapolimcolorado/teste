@@ -61,9 +61,9 @@
     <Compile Include="EntityConfig\MarcaConfiguration.cs" />
     <Compile Include="EntityConfig\SubtipoConfiguration.cs" />
     <Compile Include="EntityConfig\TipoConfiguration.cs" />
-    <Compile Include="Migrations\201802220307346_20180221231300_Categoria.cs" />
-    <Compile Include="Migrations\201802220307346_20180221231300_Categoria.Designer.cs">
-      <DependentUpon>201802220307346_20180221231300_Categoria.cs</DependentUpon>
+    <Compile Include="Migrations\201802280427143_categoria.cs" />
+    <Compile Include="Migrations\201802280427143_categoria.Designer.cs">
+      <DependentUpon>201802280427143_categoria.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,8 +86,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201802220307346_20180221231300_Categoria.resx">
-      <DependentUpon>201802220307346_20180221231300_Categoria.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802280427143_categoria.resx">
+      <DependentUpon>201802280427143_categoria.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
