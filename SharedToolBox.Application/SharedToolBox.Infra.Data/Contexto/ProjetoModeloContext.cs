@@ -18,7 +18,7 @@ namespace SharedToolBox.Infra.Data.Contexto
         }
 
         public DbSet<Categoria> Categoria { get; set; }
-        public DbSet<Tipo> Tipo { get; set; }
+        //public DbSet<Tipo> Tipo { get; set; }
         //public DbSet<Subtipo> Subtipo { get; set; }
         //public DbSet<Marca> Marca { get; set; }
         //public DbSet<Ferramenta> Ferramenta { get; set; }
@@ -42,8 +42,11 @@ namespace SharedToolBox.Infra.Data.Contexto
             modelBuilder.Properties<string>()
                 .Configure(p => p.HasMaxLength(100));
 
+            //modelBuilder.Properties<byte>()
+            //    .Configure(p => p.HasColumnType("blob"));
+
             modelBuilder.Configurations.Add(new CategoriaConfiguration());
-            modelBuilder.Configurations.Add(new TipoConfiguration());
+            //modelBuilder.Configurations.Add(new TipoConfiguration());
             //modelBuilder.Configurations.Add(new SubtipoConfiguration());
             //modelBuilder.Configurations.Add(new MarcaConfiguration());
             //modelBuilder.Configurations.Add(new FerramentaConfiguration());

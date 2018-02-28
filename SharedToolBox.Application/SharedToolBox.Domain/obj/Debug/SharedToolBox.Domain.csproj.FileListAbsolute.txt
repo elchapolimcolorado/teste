@@ -19,3 +19,4 @@ D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Domain\bin\Deb
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Domain\obj\Debug\SharedToolBox.Domain.csproj.CoreCompileInputs.cache
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Domain\obj\Debug\SharedToolBox.Domain.dll
 D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Domain\obj\Debug\SharedToolBox.Domain.pdb
+D:\Projetos\SharedToolbox\SharedToolBox.Application\SharedToolBox.Domain\obj\Debug\SharedToolBox.Domain.csprojResolveAssemblyReference.cache

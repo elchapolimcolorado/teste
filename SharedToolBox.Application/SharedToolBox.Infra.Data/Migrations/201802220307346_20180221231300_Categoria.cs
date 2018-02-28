@@ -13,13 +13,12 @@ namespace SharedToolBox.Infra.Data.Migrations
                     {
                         Codigo = c.Int(nullable: false, identity: true),
                         Nome = c.String(nullable: false, maxLength: 150, unicode: false),
-                        Imagem = c.String(maxLength: 100, unicode: false),
+                        Imagem = c.Byte(nullable: true),
                         Ativo = c.Boolean(nullable: false),
                         DataManipulacao = c.DateTime(nullable: false, precision: 0),
                         LoginManipulacao = c.String(maxLength: 100, unicode: false),
                     })
                 .PrimaryKey(t => t.Codigo);
-            
         }
         
         public override void Down()
