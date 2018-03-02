@@ -30,10 +30,9 @@ namespace SharedToolBox.Web.Controllers
             return View();
         }
 
-        // GET: Categoria/Create
-        public ActionResult Create()
+        public ActionResult Novo()
         {
-            return View();
+            return View("Novo");
         }
 
         // POST: Categoria/Create

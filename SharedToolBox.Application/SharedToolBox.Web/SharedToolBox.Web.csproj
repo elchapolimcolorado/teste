@@ -7102,6 +7102,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="tsconfig.json" />
     <Content Include="Views\Categoria\Index.cshtml" />
+    <Content Include="Views\Categoria\Novo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
