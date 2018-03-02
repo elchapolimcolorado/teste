@@ -3,3 +3,118 @@
 ################################################################################
 
 /SharedToolBox.Application/.vs/SharedToolBox/v15/Server/sqlite3
+
+/SharedToolBox.Application/.vs
+/SharedToolBox.Application/SharedToolBox.Application/bin
+/SharedToolBox.Application/SharedToolBox.Application/obj
+/SharedToolBox.Application/SharedToolBox.Application/SharedToolBox.CrossCutting.InversionOfControl/bin
+/SharedToolBox.Application/SharedToolBox.Application/SharedToolBox.CrossCutting.InversionOfControl/obj
+/SharedToolBox.Application/SharedToolBox.Application/SharedToolBox.Domain/bin
+/SharedToolBox.Application/SharedToolBox.Application/SharedToolBox.Domain/obj
+/SharedToolBox.Application/SharedToolBox.Application/SharedToolBox.Infra.Data/bin
+/SharedToolBox.Application/SharedToolBox.Application/SharedToolBox.Infra.Data/obj
+/SharedToolBox.Application/SharedToolBox.Application/SharedToolBox.Web/bin
+/SharedToolBox.Application/SharedToolBox.Application/SharedToolBox.Web/obj
+
+
+
+# compiled output
+dist/
+/tmp
+
+# dependencies
+node_modules/
+/bower_components
+
+# IDEs and editors
+/.idea
+/.vscode
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# misc
+/.sass-cache
+/connect.lock
+coverage/
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+#System Files
+.DS_Store
+Thumbs.db
+
+/reports
+
+# vim swap files
+*.swp
+
+# Ignore file for Visual Studio 2012
+
+# use glob syntax
+syntax: glob
+
+*.obj
+
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.scc
+[Bb]in
+[Dd]ebug*/
+obj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]est[Rr]esult*
+[Bb]uild[Ll]og.*
+*.[Pp]ublish.xml
+BuildProcessTemplates/*
+Published/*
+[Tt]humbs.db
+[Uu]pgradeLog*.[Xx][Mm][Ll]
+_[Uu]pgradeReport_Files*/
+[Ss]rc/[Bb]uild/
+trunk/[Bb]uild/
+_*.config
+*.build.csdef
+*/[Pp]ackage/*
+[Pp]ackages/*
+ASPNETDB.MDF
+aspnetdb_log.ldf
+*.orig
+DB.sdf
+*.docstates
+*.cscfg.bin
+packages/
+docs/~$*
+AppPackages/
+App_Data/
+.idea/
+.vs/
+*logs/
+[Pp]kg/
+SonarQube/
+[Ll]og/
+.axoCover/
