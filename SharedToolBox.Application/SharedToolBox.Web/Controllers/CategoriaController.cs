@@ -2,7 +2,9 @@
 using SharedToolBox.Application.Interface;
 using SharedToolBox.Domain.Entities;
 using SharedToolBox.Web.Models;
+using System;
 using System.Collections.Generic;
+using System.Web.Helpers;
 using System.Web.Mvc;
 
 namespace SharedToolBox.Web.Controllers
@@ -17,81 +19,53 @@ namespace SharedToolBox.Web.Controllers
             _categoriaApp = categoriaApp;
         }
 
-        // GET: Categoria
+        [HttpGet]
         public ActionResult Index()
         {
             var model = Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.GetAll());
             return View(model);
         }
 
-        // GET: Categoria/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
+        [HttpGet]
         public ActionResult Novo()
         {
-            return View("Novo");
+            var model = new CategoriaViewModel();
+            return View(model);
         }
 
-        // POST: Categoria/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Salvar(CategoriaViewModel model)
+        {
+            var categoria = Mapper.Map<CategoriaViewModel, Categoria>(model);
+
+            if (model.Codigo.Equals(0))
+                _categoriaApp.Add(categoria);
+            else
+                _categoriaApp.Update(categoria);
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult Editar(int id)
+        {
+            var model = Mapper.Map<Categoria, CategoriaViewModel>(_categoriaApp.GetById(id));
+            return View(model);
+        }
+
+        [HttpPost]
+        public JsonResult Excluir(int id)
         {
             try
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                //var categoria = Mapper.Map<CategoriaViewModel, Categoria>(model);
+                var model = _categoriaApp.GetById(id);
+                _categoriaApp.Remove(model);
+                return Json("ok", JsonRequestBehavior.AllowGet);
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
-            }
-        }
-
-        // GET: Categoria/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Categoria/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Categoria/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Categoria/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
+                return Json(string.Format("Erro: {0}", ex.Message), JsonRequestBehavior.AllowGet);
             }
         }
     }

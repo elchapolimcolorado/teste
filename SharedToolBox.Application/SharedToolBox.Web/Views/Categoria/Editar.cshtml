@@ -40,6 +40,7 @@
                         <br />
                         @using (Html.BeginForm("Salvar", "Categoria", FormMethod.Post, new { @class = "form-horizontal form-label-left", enctype = "multipart/form-data" }))
                         {
+                            @Html.HiddenFor(model => model.Codigo)
                             <div class="form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="url-pai">
                                     Nome: <span class="required">*</span>

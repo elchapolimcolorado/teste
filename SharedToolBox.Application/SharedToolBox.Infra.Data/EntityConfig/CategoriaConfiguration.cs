@@ -1,5 +1,5 @@
-﻿using System.Data.Entity.ModelConfiguration;
-using SharedToolBox.Domain.Entities;
+﻿using SharedToolBox.Domain.Entities;
+using System.Data.Entity.ModelConfiguration;
 
 namespace SharedToolBox.Infra.Data.EntityConfig
 {

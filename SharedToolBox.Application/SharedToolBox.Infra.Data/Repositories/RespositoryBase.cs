@@ -31,6 +31,13 @@ namespace SharedToolBox.Infra.Data.Repositories
 
         public void Update(TEntity obj)
         {
+            /*
+            var local = Db.Set<TEntity>()
+                         .Local
+                         .FirstOrDefault(f => f == obj);
+
+            Db.Entry(obj).State = EntityState.Detached;
+            */
             Db.Entry(obj).State = EntityState.Modified;
             Db.SaveChanges();
         }

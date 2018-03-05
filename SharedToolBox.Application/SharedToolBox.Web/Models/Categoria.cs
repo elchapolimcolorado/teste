@@ -24,6 +24,7 @@ namespace SharedToolBox.Web.Models
         public DateTime DataManipulacao { get; set; }
 
         [ScaffoldColumn(false)]
+        [DefaultValue(true)]
         public bool Ativo { get; set; }
 
         [ScaffoldColumn(false)]

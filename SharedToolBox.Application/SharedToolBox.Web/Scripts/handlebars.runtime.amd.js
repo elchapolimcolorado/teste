@@ -467,7 +467,6 @@ define('handlebars/runtime',['exports', './utils', './exception', './base'], fun
   exports.__esModule = true;
   exports.checkRevision = checkRevision;
 
-  // TODO: Remove this line and break up compilePartial
 
   exports.template = template;
   exports.wrapProgram = wrapProgram;
