@@ -15,7 +15,11 @@ namespace SharedToolBox.Domain.Entities
 
         public Subtipo Subtipo { get; set; }
 
-        public byte Imagem { get; set; }
+        public byte[] Imagem { get; set; }
+
+        public string NomeArquivo { get; set; }
+
+        public string ContentType { get; set; }
 
         public string ManualInstrucoes { get; set; }
 

@@ -29,15 +29,10 @@ namespace SharedToolBox.Infra.Data.Repositories
             return Db.Set<TEntity>().ToList();
         }
 
-        public void Update(TEntity obj)
+        public void Update(int id, TEntity obj)
         {
-            /*
-            var local = Db.Set<TEntity>()
-                         .Local
-                         .FirstOrDefault(f => f == obj);
-
-            Db.Entry(obj).State = EntityState.Detached;
-            */
+            var local = GetById(id);
+            Db.Entry(local).State = EntityState.Detached;
             Db.Entry(obj).State = EntityState.Modified;
             Db.SaveChanges();
         }

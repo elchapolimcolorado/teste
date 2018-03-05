@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{E693A420-2778-47BF-984C-38074F3CE882}"
 EndProject
@@ -22,10 +22,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedToolBox.Application", "SharedToolBox.Application\SharedToolBox.Application.csproj", "{04BB3549-5197-4106-992A-BBF275A138C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedToolBox.Web", "SharedToolBox.Web\SharedToolBox.Web.csproj", "{6D1F66D4-B990-4F86-B085-6AACF6575864}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - Crosscutting", "4.2 - Crosscutting", "{13F38A11-6C7A-419C-9A77-61F22BEBD938}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedToolBox.CrossCutting.InversionOfControl", "SharedToolBox.CrossCutting.InversionOfControl\SharedToolBox.CrossCutting.InversionOfControl.csproj", "{BECC0946-44FF-47AD-9818-C198813B26B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,10 +45,6 @@ Global
 		{6D1F66D4-B990-4F86-B085-6AACF6575864}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D1F66D4-B990-4F86-B085-6AACF6575864}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D1F66D4-B990-4F86-B085-6AACF6575864}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BECC0946-44FF-47AD-9818-C198813B26B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BECC0946-44FF-47AD-9818-C198813B26B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BECC0946-44FF-47AD-9818-C198813B26B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BECC0946-44FF-47AD-9818-C198813B26B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,8 +55,6 @@ Global
 		{89389CAE-3B3A-4365-A012-D33AF64A829C} = {DF561DE9-E18F-4CCA-AF2D-8E583C255FAB}
 		{04BB3549-5197-4106-992A-BBF275A138C6} = {2DDFBD7C-E42E-4BB4-AC5A-898B27C26C05}
 		{6D1F66D4-B990-4F86-B085-6AACF6575864} = {E693A420-2778-47BF-984C-38074F3CE882}
-		{13F38A11-6C7A-419C-9A77-61F22BEBD938} = {E6B4492F-323E-4967-9CE8-44273A0B59A4}
-		{BECC0946-44FF-47AD-9818-C198813B26B0} = {13F38A11-6C7A-419C-9A77-61F22BEBD938}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {48A3855C-FA0E-464E-800B-83C637862449}

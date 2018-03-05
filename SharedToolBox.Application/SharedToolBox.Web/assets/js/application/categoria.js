@@ -8,7 +8,7 @@
 
                 main.exibirDecisaoPopup("Deseja realmente excluir esta categoria?",
                     function () { controller.excluirCategoria(window.id_categoria_inativar); },
-                    function() {  });
+                    function () { });
             });
     };
 

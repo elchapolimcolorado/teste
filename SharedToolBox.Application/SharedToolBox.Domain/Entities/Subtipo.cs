@@ -14,5 +14,9 @@ namespace SharedToolBox.Domain.Entities
         public Tipo Tipo { get; set; }
 
         public string Imagem { get; set; }
+
+        public string NomeArquivo { get; set; }
+
+        public string ContentType { get; set; }
     }
 }

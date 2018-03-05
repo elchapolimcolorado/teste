@@ -17,7 +17,7 @@
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile>~/Views/Shared/_layoutMaster.cshtml</WebStackScaffolding_LayoutPageFile>
     <ProjectView>ProjectFiles</ProjectView>
-    <ToolsVersionPromptShown>2.3</ToolsVersionPromptShown>
+    <ToolsVersionPromptShown>2.5</ToolsVersionPromptShown>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

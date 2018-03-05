@@ -14,6 +14,10 @@ namespace SharedToolBox.Infra.Data.EntityConfig
                 .HasMaxLength(150);
 
             Property(c => c.Imagem);
+
+            Property(c => c.NomeArquivo);
+
+            Property(c => c.ContentType);
         }
     }
 }

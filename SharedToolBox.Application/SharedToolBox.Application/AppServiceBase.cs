@@ -31,9 +31,9 @@ namespace SharedToolBox.Application
             return _serviceBase.GetAll();
         }
 
-        public void Update(TEntity obj)
+        public void Update(int id, TEntity obj)
         {
-            _serviceBase.Update(obj);
+            _serviceBase.Update(id, obj);
         }
 
         public void Remove(TEntity obj)

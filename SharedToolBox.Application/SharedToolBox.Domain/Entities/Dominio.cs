@@ -9,6 +9,10 @@ namespace SharedToolBox.Domain.Entities
     {
         public int Codigo { get; set; }
 
-        public string Nome { get; set; }
+        public string Grupo { get; set; }
+
+        public string Chave { get; set; }
+
+        public string Valor { get; set; }
     }
 }

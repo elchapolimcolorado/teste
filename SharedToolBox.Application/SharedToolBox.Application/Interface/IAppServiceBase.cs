@@ -8,7 +8,7 @@ namespace SharedToolBox.Application.Interface
         void Add(TEntity obj);
         TEntity GetById(int id);
         IEnumerable<TEntity> GetAll();
-        void Update(TEntity obj);
+        void Update(int id, TEntity obj);
         void Remove(TEntity obj);
         void Dispose();
     }

@@ -14,5 +14,11 @@ namespace SharedToolBox.Domain.Entities
         public Condominio Condominio { get; set; }
 
         public Contato Contato { get; set; }
+
+        public byte[] Avatar { get; set; }
+
+        public string NomeArquivo { get; set; }
+
+        public string ContentType { get; set; }
     }
 }

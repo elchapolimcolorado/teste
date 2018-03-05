@@ -29,9 +29,9 @@ namespace SharedToolBox.Domain.Services
             return _repository.GetAll();
         }
 
-        public void Update(TEntity obj)
+        public void Update(int id, TEntity obj)
         {
-            _repository.Update(obj);
+            _repository.Update(id, obj);
         }
 
         public void Remove(TEntity obj)

@@ -44,6 +44,7 @@
     <Compile Include="Entities\Endereco.cs" />
     <Compile Include="Entities\Ferramenta.cs" />
     <Compile Include="Entities\Funcionalidade.cs" />
+    <Compile Include="Entities\TipoLogradouro.cs" />
     <Compile Include="Interfaces\Repositories\IDominioRepository.cs" />
     <Compile Include="Interfaces\Repositories\ITipoRepository.cs" />
     <Compile Include="Interfaces\Repositories\ISubtipoRepository.cs" />

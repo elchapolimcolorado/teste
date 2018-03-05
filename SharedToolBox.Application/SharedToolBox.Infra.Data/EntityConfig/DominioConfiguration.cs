@@ -9,7 +9,15 @@ namespace SharedToolBox.Infra.Data.EntityConfig
         {
             HasKey(c => c.Codigo);
 
-            Property(c => c.Nome)
+            Property(c => c.Grupo)
+                    .IsRequired()
+                    .HasMaxLength(150);
+
+            Property(c => c.Chave)
+                    .IsRequired()
+                    .HasMaxLength(150);
+
+            Property(c => c.Valor)
                     .IsRequired()
                     .HasMaxLength(150);
         }

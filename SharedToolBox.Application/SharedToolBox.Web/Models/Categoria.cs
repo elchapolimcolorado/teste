@@ -20,11 +20,16 @@ namespace SharedToolBox.Web.Models
         [DisplayName("Imagem")]
         public byte[] Imagem { get; set; }
 
+        [DisplayName("NomeArquivo")]
+        public string NomeArquivo { get; set; }
+
+        [DisplayName("ContentType")]
+        public string ContentType { get; set; }
+
         [ScaffoldColumn(false)]
         public DateTime DataManipulacao { get; set; }
 
         [ScaffoldColumn(false)]
-        [DefaultValue(true)]
         public bool Ativo { get; set; }
 
         [ScaffoldColumn(false)]
