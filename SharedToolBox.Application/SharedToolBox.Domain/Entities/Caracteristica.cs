@@ -13,6 +13,10 @@ namespace SharedToolBox.Domain.Entities
 
         public Ferramenta Ferramenta { get; set; }
 
+        public int CodigoFerramenta { get; set; }
+
         public Dominio Dominio { get; set; }
+
+        public int CodigoDominio { get; set; }
     }
 }

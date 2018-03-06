@@ -13,6 +13,8 @@ namespace SharedToolBox.Domain.Entities
 
         public Tipo Tipo { get; set; }
 
+        public int CodigoTipo { get; set; }
+
         public string Imagem { get; set; }
 
         public string NomeArquivo { get; set; }

@@ -11,15 +11,15 @@ namespace SharedToolBox.Infra.Data.EntityConfig
 
             Property(c => c.Valor)
                     .IsRequired()
-                    .HasMaxLength(200);
+                    .HasMaxLength(1000);
 
             HasRequired(p => p.Ferramenta)
                     .WithMany()
-                    .HasForeignKey(p => p.Ferramenta);
+                    .HasForeignKey(p => p.CodigoFerramenta);
 
             HasRequired(p => p.Dominio)
                     .WithMany()
-                    .HasForeignKey(p => p.Dominio);
+                    .HasForeignKey(p => p.CodigoDominio);
         }
     }
 }

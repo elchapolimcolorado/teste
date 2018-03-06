@@ -2,12 +2,12 @@
     var $container = $(container);
     var inicializar = function () {
         $container
-            .on('click',
-            '.salvar',
-            function (e) {
-                controller.salvar(e);
-                e.preventDefault();
-            })
+            //.on('click',
+            //'.salvar',
+            //function (e) {
+            //    controller.salvar(e);
+            //    e.preventDefault();
+            //})
             .on('click', '.inativar', function (e) {
                 var id = $(this).data('id');
                 window.id_categoria_inativar = id;
@@ -34,7 +34,9 @@
             });
         },
         salvar: function (e) {
-            model = { "Codigo" : "1", "Nome" : "teste" };
+            var model = {
+                "Codigo": "1", "Nome": "teste", "NomeArquivo": "", "ContentType": "", "DataManipulacao": "", "Ativo": "", "LoginManipulacao": "", "Imagem": ""
+            };
             main.post(model, 'Categoria/Salvar', view.sucessoAoSalvar, view.erroAoSalvar);
         }
         

@@ -15,9 +15,13 @@ namespace SharedToolBox.Infra.Data.EntityConfig
 
             Property(c => c.Imagem);
 
+            Property(c => c.NomeArquivo);
+
+            Property(c => c.ContentType);
+
             HasRequired(p => p.Tipo)
                     .WithMany()
-                    .HasForeignKey(p => p.Tipo);
+                    .HasForeignKey(p => p.CodigoTipo);
         }
     }
 }

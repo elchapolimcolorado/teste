@@ -11,6 +11,8 @@ namespace SharedToolBox.Domain.Entities
 
         public Categoria Categoria { get; set; }
 
+        public int CodigoCategoria { get; set; }
+
         public string Nome { get; set; }
 
         public string Imagem { get; set; }

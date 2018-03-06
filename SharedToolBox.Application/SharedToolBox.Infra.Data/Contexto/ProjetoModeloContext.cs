@@ -18,12 +18,12 @@ namespace SharedToolBox.Infra.Data.Contexto
         }
 
         public DbSet<Categoria> Categoria { get; set; }
-        //public DbSet<Tipo> Tipo { get; set; }
-        //public DbSet<Subtipo> Subtipo { get; set; }
-        //public DbSet<Marca> Marca { get; set; }
-        //public DbSet<Ferramenta> Ferramenta { get; set; }
-        //public DbSet<Caracteristica> Caracteristica { get; set; }
-        //public DbSet<Dominio> Dominio { get; set; }
+        public DbSet<Tipo> Tipo { get; set; }
+        public DbSet<Subtipo> Subtipo { get; set; }
+        public DbSet<Marca> Marca { get; set; }
+        public DbSet<Ferramenta> Ferramenta { get; set; }
+        public DbSet<Caracteristica> Caracteristica { get; set; }
+        public DbSet<Dominio> Dominio { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -46,12 +46,12 @@ namespace SharedToolBox.Infra.Data.Contexto
                 .Configure(p => p.HasColumnType("blob"));
 
             modelBuilder.Configurations.Add(new CategoriaConfiguration());
-            //modelBuilder.Configurations.Add(new TipoConfiguration());
-            //modelBuilder.Configurations.Add(new SubtipoConfiguration());
-            //modelBuilder.Configurations.Add(new MarcaConfiguration());
-            //modelBuilder.Configurations.Add(new FerramentaConfiguration());
-            //modelBuilder.Configurations.Add(new CaracteristicaConfiguration());
-            //modelBuilder.Configurations.Add(new DominioConfiguration());
+            modelBuilder.Configurations.Add(new TipoConfiguration());
+            modelBuilder.Configurations.Add(new SubtipoConfiguration());
+            modelBuilder.Configurations.Add(new MarcaConfiguration());
+            modelBuilder.Configurations.Add(new FerramentaConfiguration());
+            modelBuilder.Configurations.Add(new CaracteristicaConfiguration());
+            modelBuilder.Configurations.Add(new DominioConfiguration());
         }
 
         public override int SaveChanges()

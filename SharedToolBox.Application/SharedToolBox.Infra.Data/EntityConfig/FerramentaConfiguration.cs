@@ -19,9 +19,13 @@ namespace SharedToolBox.Infra.Data.EntityConfig
 
             HasRequired(p => p.Subtipo)
                     .WithMany()
-                    .HasForeignKey(p => p.Subtipo);
+                    .HasForeignKey(p => p.CodigoSubtipo);
 
             Property(c => c.Imagem);
+
+            Property(c => c.NomeArquivo);
+
+            Property(c => c.ContentType);
 
             Property(c => c.ManualInstrucoes)
                     .HasMaxLength(200);
@@ -31,7 +35,7 @@ namespace SharedToolBox.Infra.Data.EntityConfig
 
             HasRequired(p => p.Marca)
                     .WithMany()
-                    .HasForeignKey(p => p.Marca);
+                    .HasForeignKey(p => p.CodigoMarca);
         }
     }
 }

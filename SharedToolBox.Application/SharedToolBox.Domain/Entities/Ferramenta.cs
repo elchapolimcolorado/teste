@@ -15,6 +15,8 @@ namespace SharedToolBox.Domain.Entities
 
         public Subtipo Subtipo { get; set; }
 
+        public int CodigoSubtipo { get; set; }
+
         public byte[] Imagem { get; set; }
 
         public string NomeArquivo { get; set; }
@@ -26,5 +28,7 @@ namespace SharedToolBox.Domain.Entities
         public string VideoExplicativo { get; set; }
 
         public Marca Marca { get; set; }
+
+        public int CodigoMarca { get; set; }
     }
 }

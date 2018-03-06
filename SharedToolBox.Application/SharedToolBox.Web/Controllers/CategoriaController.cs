@@ -86,15 +86,13 @@ namespace SharedToolBox.Web.Controllers
                 else
                     _categoriaApp.Update(model.Codigo, categoria);
 
-                return Content("<script>main.showSuccessMessage('Categoria salva com sucesso.');</script>");
-
-                
+                //return Content("<script>main.showSuccessMessage('Categoria salva com sucesso.');</script>");
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
-                ViewBag.Message = ex.Message;
-                return RedirectToAction("Novo");
-                //return Content("<script>main.showErrorMessage('Ocorreu um erro ao salvar a categoria. (" + ex.Message + ")');</script>");
+                //return RedirectToAction("Novo");
+                return Content("<script>main.showErrorMessage('Ocorreu um erro ao salvar a categoria. (" + ex.Message + ")');return false;</script>");
             }
         }
 
