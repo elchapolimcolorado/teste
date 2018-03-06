@@ -27,7 +27,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -248,6 +248,7 @@
     <Compile Include="Models\Base\MappedTo.cs" />
     <Compile Include="Models\Base\Paginacao.cs" />
     <Compile Include="Models\Base\UsuarioLogado.cs" />
+    <Compile Include="Models\Error.cs" />
     <Compile Include="Models\Login\LoginModel.cs" />
     <Compile Include="Models\MercadoLivre\AssociacaoProdutoRetornoModel.cs" />
     <Compile Include="Models\MercadoLivre\AssociacaoProdutosModel.cs" />
@@ -3295,8 +3296,8 @@
     <Content Include="Scripts\knockout-2.3.0.debug.js" />
     <Content Include="Scripts\knockout-2.3.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\oLD\bootstrap.js" />
-    <Content Include="Scripts\oLD\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -3979,17 +3980,8 @@
     <Content Include="assets\vendors\validator\README.md" />
     <Content Include="assets\vendors\validator\validator.jquery.json" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <None Include="Scripts\oLD\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\oLD\jquery-1.10.2.js" />
-    <Content Include="Scripts\oLD\jquery-1.10.2.min.js" />
-    <None Include="Scripts\oLD\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\oLD\jquery.validate.js" />
-    <Content Include="Scripts\oLD\jquery.validate.min.js" />
-    <Content Include="Scripts\oLD\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\oLD\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\oLD\modernizr-2.6.2.js" />
-    <Content Include="Scripts\oLD\respond.js" />
-    <Content Include="Scripts\oLD\respond.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
     <Content Include="template\build\css\custom.css" />
     <Content Include="template\build\css\custom.min.css" />
     <Content Include="template\build\js\custom.js" />
@@ -7099,7 +7091,6 @@
     <Content Include="Views\Produtos\Edit.cshtml" />
     <Content Include="Views\Produtos\Index.cshtml" />
     <Content Include="Views\Home\Index1.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="tsconfig.json" />
     <Content Include="Views\Categoria\Index.cshtml" />
@@ -7121,7 +7112,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Scripts\oLD\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="assets\vendors\moment\moment.d.ts" />

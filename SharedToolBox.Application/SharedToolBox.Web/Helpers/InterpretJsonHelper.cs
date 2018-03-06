@@ -13,5 +13,10 @@ namespace SoftFramework.Web.Helpers
         {
             return (HtmlString)MvcHtmlString.Create(new JavaScriptSerializer().Serialize(model));
         }
+
+        public static string ToJson(this Object obj)
+        {
+            return new JavaScriptSerializer().Serialize(obj);
+        }
     }
 }

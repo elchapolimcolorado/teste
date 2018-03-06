@@ -35,12 +35,24 @@ namespace SharedToolBox.Web.Controllers
         }
 
         [HttpGet]
-        public ActionResult Novo()
+        public ActionResult Recarregar(CategoriaViewModel model)
         {
             try
             { 
-                var model = new CategoriaViewModel();
-                model.Ativo = true;
+                return View(model);
+            }
+            catch (Exception ex)
+            {
+                return Json(string.Format("Erro: {0}", ex.Message), JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        [HttpGet]
+        public ActionResult Novo()
+        {
+            try
+            {
+                var model = new CategoriaViewModel() { Ativo = true };
                 return View(model);
             }
             catch (Exception ex)
@@ -54,8 +66,6 @@ namespace SharedToolBox.Web.Controllers
         {
             try
             {
-                throw new Exception();
-
                 var categoria = Mapper.Map<CategoriaViewModel, Categoria>(model);
 
                 HttpPostedFileBase file = Request.Files["ImageData"];
@@ -68,7 +78,7 @@ namespace SharedToolBox.Web.Controllers
                 }
                 else
                 {
-                    return Json("Erro: Não é possível vincular arquivos que não seja imagens.", JsonRequestBehavior.AllowGet);
+                    throw new Exception("Erro: Não é possível vincular arquivos que não seja imagens.");
                 }
 
                 if (model.Codigo.Equals(0))
@@ -76,13 +86,15 @@ namespace SharedToolBox.Web.Controllers
                 else
                     _categoriaApp.Update(model.Codigo, categoria);
 
-                return RedirectToAction("Index");
+                return Content("<script>main.showSuccessMessage('Categoria salva com sucesso.');</script>");
+
+                
             }
             catch (Exception ex)
             {
-                //return Json(new { status = "error", message = ex.Message }, JsonRequestBehavior.AllowGet);
-                //throw new StatusException("Your error message here");
-                return erro
+                ViewBag.Message = ex.Message;
+                return RedirectToAction("Novo");
+                //return Content("<script>main.showErrorMessage('Ocorreu um erro ao salvar a categoria. (" + ex.Message + ")');</script>");
             }
         }
 
