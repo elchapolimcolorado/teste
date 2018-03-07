@@ -229,7 +229,6 @@
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\ProdutoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -248,20 +247,19 @@
     <Compile Include="Models\Base\MappedTo.cs" />
     <Compile Include="Models\Base\Paginacao.cs" />
     <Compile Include="Models\Base\UsuarioLogado.cs" />
-    <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\Tipo.cs" />
+    <Compile Include="Models\Caracteristica.cs" />
+    <Compile Include="Models\Ferramenta.cs" />
+    <Compile Include="Models\Marca.cs" />
+    <Compile Include="Models\Dominio.cs" />
+    <Compile Include="Models\Subtipo.cs" />
     <Compile Include="Models\Login\LoginModel.cs" />
-    <Compile Include="Models\MercadoLivre\AssociacaoProdutoRetornoModel.cs" />
-    <Compile Include="Models\MercadoLivre\AssociacaoProdutosModel.cs" />
-    <Compile Include="Models\MercadoLivre\AtualizarVariacaoCombinacaoModel.cs" />
-    <Compile Include="Models\MercadoLivre\AtualizarVariacaoListagemModel.cs" />
-    <Compile Include="Models\MercadoLivre\HomeModel.cs" />
-    <Compile Include="Models\MercadoLivre\ProdutoModel.cs" />
+    <Compile Include="Models\Home\HomeModel.cs" />
     <Compile Include="Models\Login\AccountViewModels.cs" />
     <Compile Include="Models\Login\IdentityModels.cs" />
     <Compile Include="Models\Login\ManageViewModels.cs" />
     <Compile Include="Models\Resource\PortalResource.cs" />
     <Compile Include="Models\Resource\ResourceBase.cs" />
-    <Compile Include="Models\Usuario\NovaPessoaViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Models\Categoria.cs" />
@@ -7096,10 +7094,18 @@
     <Content Include="Views\Categoria\Index.cshtml" />
     <Content Include="Views\Categoria\Novo.cshtml" />
     <Content Include="Views\Categoria\Editar.cshtml" />
+    <Content Include="Views\Tipo\Editar.cshtml" />
+    <Content Include="Views\Tipo\Index.cshtml" />
+    <Content Include="Views\Tipo\Novo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="assets\js\application\categoria\" />
+    <Folder Include="Views\Caracteristica\" />
+    <Folder Include="Views\Dominio\" />
+    <Folder Include="Views\Ferramenta\" />
+    <Folder Include="Views\Marca\" />
+    <Folder Include="Views\Subtipo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
