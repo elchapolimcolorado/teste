@@ -67,6 +67,11 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CaracteristicaRepository.cs" />
+    <Compile Include="Repositories\DominioRepository.cs" />
+    <Compile Include="Repositories\FerramentaRepository.cs" />
+    <Compile Include="Repositories\MarcaRepository.cs" />
+    <Compile Include="Repositories\SubtipoRepository.cs" />
     <Compile Include="Repositories\CategoriaRepository.cs" />
     <Compile Include="Repositories\RespositoryBase.cs" />
     <Compile Include="Repositories\TipoRepository.cs" />

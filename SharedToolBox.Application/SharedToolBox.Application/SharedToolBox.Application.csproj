@@ -40,8 +40,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppServiceBase.cs" />
+    <Compile Include="CaracteristicaAppService.cs" />
+    <Compile Include="DominioAppService.cs" />
+    <Compile Include="TipoAppService.cs" />
+    <Compile Include="SubtipoAppService.cs" />
+    <Compile Include="FerramentaAppService.cs" />
+    <Compile Include="MarcaAppService.cs" />
     <Compile Include="CategoriaAppService.cs" />
     <Compile Include="Interface\IAppServiceBase.cs" />
+    <Compile Include="Interface\ITipoAppService.cs" />
+    <Compile Include="Interface\ISubtipoAppService.cs" />
+    <Compile Include="Interface\IDominioAppService.cs" />
+    <Compile Include="Interface\IMarcaAppService.cs" />
+    <Compile Include="Interface\IFerramentaAppService.cs" />
+    <Compile Include="Interface\ICaracteristicaAppService.cs" />
     <Compile Include="Interface\ICategoriaAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
