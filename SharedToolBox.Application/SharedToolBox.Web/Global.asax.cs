@@ -31,7 +31,12 @@ namespace SharedToolBox.Web
             container.Register<ICategoriaRepository, CategoriaRepository>(Lifestyle.Singleton);
             container.Register<ICategoriaService, CategoriaService>(Lifestyle.Singleton);
             container.Register<ICategoriaAppService, CategoriaAppService>(Lifestyle.Singleton);
-            
+
+            container.Register<IRepositoryBase<Tipo>, RepositoryBase<Tipo>>(Lifestyle.Singleton);
+            container.Register<ITipoRepository, TipoRepository>(Lifestyle.Singleton);
+            container.Register<ITipoService, TipoService>(Lifestyle.Singleton);
+            container.Register<ITipoAppService, TipoAppService>(Lifestyle.Singleton);
+
             container.Verify();
             DependencyResolver.SetResolver(new SimpleInjectorDependencyResolver(container));
         }

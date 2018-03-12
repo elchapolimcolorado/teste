@@ -1,11 +1,11 @@
 ﻿@{
-    ViewBag.Title = "Categoria";
+    ViewBag.Title = "Tipo";
     Layout = "~/Views/Shared/_layoutMaster.cshtml";
-    @model SharedToolBox.Web.Models.CategoriaViewModel
+    @model SharedToolBox.Web.Models.TipoViewModel
 }
 @section scripts
 {
-    <script type="text/javascript" src="~/assets/js/application/categoria.js"></script>
+    <script type="text/javascript" src="~/assets/js/application/tipo.js"></script>
     <!-- iCheck -->
     <script src="~/assets/vendors/iCheck/icheck.min.js"></script>
 }
@@ -18,7 +18,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Cadastro de Categoria</h3>
+                <h3>Cadastro de Tipo</h3>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -38,7 +38,7 @@
                             <strong>Por favor!</strong> Adicione ao menos um produto relacionado para fazer a associação.
                         </div>
                         <br />
-                        @using (Ajax.BeginForm("Salvar", "Categoria", null,
+                        @using (Ajax.BeginForm("Salvar", "Tipo", null,
                             new AjaxOptions() { HttpMethod = "post" },
                             new { @class = "form-horizontal form-label-left", enctype = "multipart/form-data" }))
                         {
@@ -49,6 +49,16 @@
                                 <div class="item col-md-6 col-sm-6 col-xs-12">
                                     <div class="input-group">
                                         @Html.TextBoxFor(model => model.Nome, new { @class = "form-control", @required = "required", @maxlength = "150" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="url-pai">
+                                    Categoria: <span class="required">*</span>
+                                </label>
+                                <div class="item col-md-6 col-sm-6 col-xs-12">
+                                    <div class="input-group">
+                                        @Html.DropDownListFor(model => model.Categoria, null, new { @class = "form-control", @required = "required" })
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +85,7 @@
                             <div class="ln_solid"></div>
                             <div class="form-group">
                                 <div class="col-md-3 col-md-offset-9">
-                                    <a href="~/Categoria/Index" class="btn btn-dark">Voltar</a>
+                                    <a href="~/Tipo/Index" class="btn btn-dark">Voltar</a>
                                     <button type="submit" id="salvar" class="btn btn-success salvar">Salvar</button>
                                 </div>
                             </div>

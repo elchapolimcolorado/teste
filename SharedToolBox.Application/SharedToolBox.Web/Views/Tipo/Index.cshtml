@@ -1,11 +1,11 @@
 ﻿@{
-    ViewBag.Title = "Categoria";
+    ViewBag.Title = "Tipo";
     Layout = "~/Views/Shared/_layoutMaster.cshtml";
-    @model IEnumerable<SharedToolBox.Web.Models.CategoriaViewModel>
+    @model IEnumerable<SharedToolBox.Web.Models.TipoViewModel>
 }
 @section scripts
 {
-    <script type="text/javascript" src="~/assets/js/application/categoria.js"></script>
+    <script type="text/javascript" src="~/assets/js/application/tipo.js"></script>
     <!-- iCheck -->
     <script src="~/assets/vendors/iCheck/icheck.min.js"></script>
 }
@@ -19,7 +19,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Categorias</h3>
+                <h3>Tipos</h3>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -28,7 +28,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Lista de categorias</h2>
+                        <h2>Lista de Tipos</h2>
                         <div class="clearfix"></div>
                     </div>
 
@@ -39,6 +39,7 @@
                                 <thead>
                                     <tr>
                                         <th>Nome</th>
+                                        <th>Categoria</th>
                                         <th>Ações</th>
                                     </tr>
                                 </thead>
@@ -47,8 +48,9 @@
                                 {
                                     <tr>
                                         <td>@item.Nome</td>
+                                        <td>@item.Categoria.Nome</td>
                                         <td>
-                                            <a href="~/Categoria/Editar?id=@item.Codigo">Editar | </a>
+                                            <a href="~/Tipo/Editar?id=@item.Codigo">Editar | </a>
                                             <a href="#" class="inativar" data-id="@item.Codigo">Excluir</a>
                                         </td>
                                     </tr>
@@ -59,7 +61,7 @@
                         <div class="ln_solid"></div>
                         <div class="form-group">
                             <div class="col-md-2 col-md-offset-10">
-                                <a href="~/Categoria/Novo" class="btn btn-success">Novo</a>
+                                <a href="~/Tipo/Novo" class="btn btn-success">Novo</a>
                             </div>
                         </div>
                     </div>
