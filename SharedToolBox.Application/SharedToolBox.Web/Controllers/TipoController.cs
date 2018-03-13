@@ -13,14 +13,14 @@ namespace SharedToolBox.Web.Controllers
     [AllowAnonymous]
     public class TipoController : Controller
     {
-        private readonly ITipoAppService _TipoApp;
-        private readonly ICategoriaAppService _CategoriaApp;
+        private readonly ITipoAppService _tipoApp;
+        private readonly ICategoriaAppService _categoriaApp;
 
         public TipoController(ITipoAppService TipoApp,
             ICategoriaAppService CategoriaApp)
         {
-            _TipoApp = TipoApp;
-            _CategoriaApp = CategoriaApp;
+            _tipoApp = TipoApp;
+            _categoriaApp = CategoriaApp;
         }
 
         [HttpGet]
@@ -28,7 +28,7 @@ namespace SharedToolBox.Web.Controllers
         {
             try
             {
-                var model = Mapper.Map<IEnumerable<Tipo>, IEnumerable<TipoViewModel>>(_TipoApp.GetAll());
+                var model = Mapper.Map<IEnumerable<Tipo>, IEnumerable<TipoViewModel>>(_tipoApp.GetAll());
                 return View(model);
             }
             catch (Exception ex)
@@ -55,7 +55,12 @@ namespace SharedToolBox.Web.Controllers
         {
             try
             {
-                var model = new TipoViewModel() { Ativo = true };
+                var model = new TipoViewModel()
+                {
+                    Ativo = true,
+                    Categorias = new SelectList(Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.GetAll()), "Codigo", "Nome")
+                };
+
                 return View(model);
             }
             catch (Exception ex)
@@ -85,9 +90,9 @@ namespace SharedToolBox.Web.Controllers
                 }
 
                 if (model.Codigo.Equals(0))
-                    _TipoApp.Add(Tipo);
+                    _tipoApp.Add(Tipo);
                 else
-                    _TipoApp.Update(model.Codigo, Tipo);
+                    _tipoApp.Update(model.Codigo, Tipo);
 
                 //return Content("<script>main.showSuccessMessage('Tipo salva com sucesso.');</script>");
                 return RedirectToAction("Index");
@@ -104,7 +109,7 @@ namespace SharedToolBox.Web.Controllers
         {
             try
             {
-                var model = Mapper.Map<Tipo, TipoViewModel>(_TipoApp.GetById(id));
+                var model = Mapper.Map<Tipo, TipoViewModel>(_tipoApp.GetById(id));
                 byte[] cover = model.Imagem;
 
                 if (cover != null)
@@ -123,7 +128,8 @@ namespace SharedToolBox.Web.Controllers
         {
             try
             {
-                var model = Mapper.Map<Tipo, TipoViewModel>(_TipoApp.GetById(id));
+                var model = Mapper.Map<Tipo, TipoViewModel>(_tipoApp.GetById(id));
+                model.Categorias = new SelectList(Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.GetAll()), "Codigo", "Nome");
                 return View(model);
             }
             catch (Exception ex)
@@ -137,8 +143,8 @@ namespace SharedToolBox.Web.Controllers
         {
             try
             {
-                var model = _TipoApp.GetById(id);
-                _TipoApp.Remove(model);
+                var model = _tipoApp.GetById(id);
+                _tipoApp.Remove(model);
                 return Json("ok", JsonRequestBehavior.AllowGet);
             }
             catch (Exception ex)

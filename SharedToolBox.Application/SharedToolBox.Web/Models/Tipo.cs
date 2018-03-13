@@ -1,7 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Web.Mvc;
 
 namespace SharedToolBox.Web.Models
 {
@@ -16,10 +18,6 @@ namespace SharedToolBox.Web.Models
         [MinLength(2, ErrorMessage = "Minimo {0} caracteres")]
         public string Nome { get; set; }
 
-        public CategoriaViewModel Categoria { get; set; }
-
-        public int CodigoCategoria { get; set; }
-
         [Required(ErrorMessage = "Selecione uma imagem")]
         [DisplayName("Imagem")]
         public byte[] Imagem { get; set; }
@@ -33,6 +31,9 @@ namespace SharedToolBox.Web.Models
         [Required(ErrorMessage = "Selecione a categoria")]
         [DisplayName("Categoria")]
         public CategoriaViewModel Categoria { get; set; }
+
+        [NotMapped]
+        public SelectList Categorias { get; set; }
 
         [Required(ErrorMessage = "Selecione a categoria")]
         [DisplayName("CodigoCategoria")]

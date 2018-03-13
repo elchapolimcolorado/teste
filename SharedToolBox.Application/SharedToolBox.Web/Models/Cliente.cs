@@ -30,6 +30,6 @@ namespace SharedToolBox.Web.Models
         public DateTime DataCadastro { get; set; }
 
         public bool Ativo { get; set; }
-        public virtual IEnumerable<ProdutoViewModel> Produtos { get; set; }
+        //public virtual IEnumerable<ProdutoViewModel> Produtos { get; set; }
     }
 }
