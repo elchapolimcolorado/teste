@@ -18,12 +18,10 @@ namespace SharedToolBox.Web.Models
 
         [Required(ErrorMessage = "Preencha o campo Chave")]
         [MaxLength(150, ErrorMessage = "Máximo {0} caracteres")]
-        [MinLength(2, ErrorMessage = "Minimo {0} caracteres")]
         public string Chave { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo Valor")]
         [MaxLength(150, ErrorMessage = "Máximo {0} caracteres")]
-        [MinLength(2, ErrorMessage = "Minimo {0} caracteres")]
         public string Valor { get; set; }
 
         [ScaffoldColumn(false)]

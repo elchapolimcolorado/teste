@@ -264,7 +264,6 @@
     <Compile Include="Startup.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Cliente.cs" />
-    <Compile Include="Models\Produto.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\build\css\custom.css" />

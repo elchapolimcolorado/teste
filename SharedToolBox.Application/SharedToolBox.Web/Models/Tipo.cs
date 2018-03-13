@@ -26,6 +26,14 @@ namespace SharedToolBox.Web.Models
         [DisplayName("ContentType")]
         public string ContentType { get; set; }
 
+        [Required(ErrorMessage = "Selecione a categoria")]
+        [DisplayName("Categoria")]
+        public CategoriaViewModel Categoria { get; set; }
+
+        [Required(ErrorMessage = "Selecione a categoria")]
+        [DisplayName("CodigoCategoria")]
+        public int CodigoCategoria { get; set; }
+
         [ScaffoldColumn(false)]
         public DateTime DataManipulacao { get; set; }
 

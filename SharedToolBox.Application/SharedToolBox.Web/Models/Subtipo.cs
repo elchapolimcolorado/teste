@@ -26,6 +26,12 @@ namespace SharedToolBox.Web.Models
         [DisplayName("ContentType")]
         public string ContentType { get; set; }
 
+        [DisplayName("Tipo")]
+        public TipoViewModel Tipo { get; set; }
+
+        [DisplayName("CodigoTipo")]
+        public int CodigoTipo { get; set; }
+
         [ScaffoldColumn(false)]
         public DateTime DataManipulacao { get; set; }
 
