@@ -11,6 +11,7 @@ namespace SharedToolBox.Web.AutoMapper
             Mapper.Initialize(x =>
             {
                 x.CreateMap<Categoria, CategoriaViewModel>().ReverseMap();
+                x.CreateMap<Tipo, TipoViewModel>().ReverseMap();
             });
         }
     }

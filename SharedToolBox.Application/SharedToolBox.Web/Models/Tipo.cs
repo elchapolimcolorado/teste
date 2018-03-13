@@ -16,6 +16,10 @@ namespace SharedToolBox.Web.Models
         [MinLength(2, ErrorMessage = "Minimo {0} caracteres")]
         public string Nome { get; set; }
 
+        public CategoriaViewModel Categoria { get; set; }
+
+        public int CodigoCategoria { get; set; }
+
         [Required(ErrorMessage = "Selecione uma imagem")]
         [DisplayName("Imagem")]
         public byte[] Imagem { get; set; }
