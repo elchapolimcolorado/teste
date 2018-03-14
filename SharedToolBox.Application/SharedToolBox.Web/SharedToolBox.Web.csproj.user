@@ -19,6 +19,7 @@
     <ProjectView>ProjectFiles</ProjectView>
     <ToolsVersionPromptShown>2.3</ToolsVersionPromptShown>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
