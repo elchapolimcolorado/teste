@@ -16,8 +16,7 @@ namespace SharedToolBox.Web.Controllers
         private readonly ITipoAppService _tipoApp;
         private readonly ICategoriaAppService _categoriaApp;
 
-        public TipoController(ITipoAppService TipoApp,
-            ICategoriaAppService CategoriaApp)
+        public TipoController(ICategoriaAppService CategoriaApp, ITipoAppService TipoApp)
         {
             _tipoApp = TipoApp;
             _categoriaApp = CategoriaApp;
@@ -57,9 +56,10 @@ namespace SharedToolBox.Web.Controllers
             {
                 var model = new TipoViewModel()
                 {
-                    Ativo = true,
-                    Categorias = new SelectList(Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.GetAll()), "Codigo", "Nome")
+                    Ativo = true
                 };
+
+                ViewBag.Categorias = Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.GetAll());
 
                 return View(model);
             }
@@ -129,7 +129,7 @@ namespace SharedToolBox.Web.Controllers
             try
             {
                 var model = Mapper.Map<Tipo, TipoViewModel>(_tipoApp.GetById(id));
-                model.Categorias = new SelectList(Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.GetAll()), "Codigo", "Nome");
+                ViewBag.Categorias = Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.GetAll());
                 return View(model);
             }
             catch (Exception ex)

@@ -42,7 +42,6 @@
         
     };
     var view = {
-        erroGenerico: function (e) { console.log(e); },
         showLoadingForm2: function() {
             main.showLoading($('#form-2'));
         },

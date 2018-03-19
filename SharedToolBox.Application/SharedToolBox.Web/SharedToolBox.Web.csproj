@@ -248,12 +248,12 @@
     <Compile Include="Models\Base\MappedTo.cs" />
     <Compile Include="Models\Base\Paginacao.cs" />
     <Compile Include="Models\Base\UsuarioLogado.cs" />
-    <Compile Include="Models\Tipo.cs" />
-    <Compile Include="Models\Caracteristica.cs" />
-    <Compile Include="Models\Ferramenta.cs" />
-    <Compile Include="Models\Marca.cs" />
-    <Compile Include="Models\Dominio.cs" />
-    <Compile Include="Models\Subtipo.cs" />
+    <Compile Include="Models\TipoViewModel.cs" />
+    <Compile Include="Models\CaracteristicaViewModel.cs" />
+    <Compile Include="Models\FerramentaViewModel.cs" />
+    <Compile Include="Models\MarcaViewModel.cs" />
+    <Compile Include="Models\DominioViewModel.cs" />
+    <Compile Include="Models\SubtipoViewModel.cs" />
     <Compile Include="Models\Login\LoginModel.cs" />
     <Compile Include="Models\Home\HomeModel.cs" />
     <Compile Include="Models\Login\AccountViewModels.cs" />
@@ -263,8 +263,8 @@
     <Compile Include="Models\Resource\ResourceBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Models\Categoria.cs" />
-    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\CategoriaViewModel.cs" />
+    <Compile Include="Models\ClienteViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\build\css\custom.css" />
