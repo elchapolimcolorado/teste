@@ -27,9 +27,19 @@ namespace SharedToolBox.Web.Models
         [DisplayName("ContentType")]
         public string ContentType { get; set; }
 
-        [Required(ErrorMessage = "Selecione a categoria")]
-        [DisplayName("Categoria")]
-        public CategoriaViewModel Categoria { get; set; }
+        CategoriaViewModel _categoria;
+        [NotMapped]
+        public CategoriaViewModel Categoria
+        {
+            get
+            {
+                return null;
+            }
+            set
+            {
+                _categoria = value;
+            }
+        }
 
         [Required(ErrorMessage = "Selecione a categoria")]
         [DisplayName("CodigoCategoria")]

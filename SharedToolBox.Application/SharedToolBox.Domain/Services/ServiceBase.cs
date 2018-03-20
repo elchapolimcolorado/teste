@@ -29,6 +29,11 @@ namespace SharedToolBox.Domain.Services
             return _repository.GetAll();
         }
 
+        public IEnumerable<TEntity> GetOnlyActive()
+        {
+            return _repository.GetOnlyActive();
+        }
+
         public void Update(int id, TEntity obj)
         {
             _repository.Update(id, obj);

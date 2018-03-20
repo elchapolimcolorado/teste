@@ -59,7 +59,7 @@ namespace SharedToolBox.Web.Controllers
                     Ativo = true
                 };
 
-                ViewBag.Categorias = Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.GetAll());
+                ViewBag.Categorias = Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.GetOnlyActive());
 
                 return View(model);
             }
@@ -129,7 +129,7 @@ namespace SharedToolBox.Web.Controllers
             try
             {
                 var model = Mapper.Map<Tipo, TipoViewModel>(_tipoApp.GetById(id));
-                ViewBag.Categorias = Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.GetAll());
+                ViewBag.Categorias = Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.GetOnlyActive());
                 return View(model);
             }
             catch (Exception ex)

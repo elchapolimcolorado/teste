@@ -7,6 +7,7 @@ namespace SharedToolBox.Domain.Interfaces.Repositories
         void Add(TEntity obj);
         TEntity GetById(int id);
         IEnumerable<TEntity> GetAll();
+        IEnumerable<TEntity> GetOnlyActive();
         void Update(int id, TEntity obj);
         void Remove(TEntity obj);
         void Dispose();

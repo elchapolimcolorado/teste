@@ -31,6 +31,11 @@ namespace SharedToolBox.Application
             return _serviceBase.GetAll();
         }
 
+        public IEnumerable<TEntity> GetOnlyActive()
+        {
+            return _serviceBase.GetOnlyActive();
+        }
+
         public void Update(int id, TEntity obj)
         {
             _serviceBase.Update(id, obj);
