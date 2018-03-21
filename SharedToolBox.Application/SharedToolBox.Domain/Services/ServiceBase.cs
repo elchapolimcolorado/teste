@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using SharedToolBox.Domain.Interfaces.Repositories;
 using SharedToolBox.Domain.Interfaces.Services;
 
@@ -29,7 +30,7 @@ namespace SharedToolBox.Domain.Services
             return _repository.GetAll();
         }
 
-        public IEnumerable<TEntity> GetOnlyActive()
+        public IList<TEntity> GetOnlyActive()
         {
             return _repository.GetOnlyActive();
         }
@@ -42,6 +43,11 @@ namespace SharedToolBox.Domain.Services
         public void Remove(TEntity obj)
         {
             _repository.Remove(obj);
+        }
+
+        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
+        {
+            return _repository.Find(predicate);
         }
 
         public void Dispose()

@@ -29,9 +29,10 @@ namespace SharedToolBox.Infra.Data.Repositories
             return Db.Set<TEntity>().ToList();
         }
 
-        public IEnumerable<TEntity> GetOnlyActive()
+        public IList<TEntity> GetOnlyActive()
         {
-            return Db.Set<TEntity>().Where(x => x.GetType().GetField("ATIVO").GetValue(x).Equals(true)).ToList();
+            return Db.Set<TEntity>().ToList();
+            //  .Where(x => x.GetType().GetField("ATIVO").GetValue(x).Equals(true)).ToList();
 
             //var expr = SelectExpression<TEntity, bool>("ATIVO");
 
@@ -45,27 +46,27 @@ namespace SharedToolBox.Infra.Data.Repositories
             */
         }
 
-        public Expression<Func<TItem, bool>> IsActive()
-        {
-            string name = this.charityName;
-            string referenceNumber = this.referenceNumber;
-            return p =>
-                (string.IsNullOrEmpty(name) ||
-                    p.registeredName.ToLower().Contains(name.ToLower()) ||
-                    p.alias.ToLower().Contains(name.ToLower()) ||
-                    p.charityId.ToLower().Contains(name.ToLower())) &&
-                (string.IsNullOrEmpty(referenceNumber) ||
-                    p.charityReference.ToLower().Contains(referenceNumber.ToLower()));
-        }
+        //public Expression<Func<TItem, bool>> IsActive()
+        //{
+        //    string name = this.charityName;
+        //    string referenceNumber = this.referenceNumber;
+        //    return p =>
+        //        (string.IsNullOrEmpty(name) ||
+        //            p.registeredName.ToLower().Contains(name.ToLower()) ||
+        //            p.alias.ToLower().Contains(name.ToLower()) ||
+        //            p.charityId.ToLower().Contains(name.ToLower())) &&
+        //        (string.IsNullOrEmpty(referenceNumber) ||
+        //            p.charityReference.ToLower().Contains(referenceNumber.ToLower()));
+        //}
 
 
-        public Expression<Func<TItem, object>> SelectExpression<TItem>(string fieldName)
-        {
-            var param = Expression.Parameter(typeof(TItem), "item");
-            var field = Expression.Property(param, fieldName);
-            return Expression.Lambda<Func<TItem, object>>(field,
-                new ParameterExpression[] { param });
-        }
+        //public Expression<Func<TItem, object>> SelectExpression<TItem>(string fieldName)
+        //{
+        //    var param = Expression.Parameter(typeof(TItem), "item");
+        //    var field = Expression.Property(param, fieldName);
+        //    return Expression.Lambda<Func<TItem, object>>(field,
+        //        new ParameterExpression[] { param });
+        //}
 
 
         public void Update(int id, TEntity obj)
@@ -80,6 +81,11 @@ namespace SharedToolBox.Infra.Data.Repositories
         {
             Db.Set<TEntity>().Remove(obj);
             Db.SaveChanges();
+        }
+
+        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
+        {
+            return Db.Set<TEntity>().Where(predicate).AsNoTracking();
         }
 
         public void Dispose()

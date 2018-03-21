@@ -70,15 +70,26 @@ namespace SharedToolBox.Web.Controllers
 
                 HttpPostedFileBase file = Request.Files["ImageData"];
 
-                if (file.IsImage())
+                if (file.ContentLength != 0)
                 {
-                    categoria.Imagem = file.ConvertToBytes();
-                    categoria.ContentType = file.ContentType;
-                    categoria.NomeArquivo = file.FileName;
+                    if (file.IsImage())
+                    {
+                        categoria.Imagem = file.ConvertToBytes();
+                        categoria.ContentType = file.ContentType;
+                        categoria.NomeArquivo = file.FileName;
+                    }
+                    else
+                    {
+                        throw new Exception("Erro: Não é possível vincular arquivos que não sejam imagens.");
+                    }
                 }
-                else
+                else if (!model.Codigo.Equals(0))
                 {
-                    throw new Exception("Erro: Não é possível vincular arquivos que não seja imagens.");
+                    var image = Mapper.Map<Categoria, CategoriaViewModel>(_categoriaApp.GetById(model.Codigo));
+
+                    categoria.ContentType = image.ContentType;
+                    categoria.NomeArquivo = image.NomeArquivo;
+                    categoria.Imagem = image.Imagem;
                 }
 
                 if (model.Codigo.Equals(0))

@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using SharedToolBox.Application.Interface;
 using SharedToolBox.Domain.Interfaces.Services;
 
@@ -31,7 +32,7 @@ namespace SharedToolBox.Application
             return _serviceBase.GetAll();
         }
 
-        public IEnumerable<TEntity> GetOnlyActive()
+        public IList<TEntity> GetOnlyActive()
         {
             return _serviceBase.GetOnlyActive();
         }
@@ -44,6 +45,11 @@ namespace SharedToolBox.Application
         public void Remove(TEntity obj)
         {
             _serviceBase.Remove(obj);
+        }
+
+        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
+        {
+            return _serviceBase.Find(predicate);
         }
 
         public void Dispose()

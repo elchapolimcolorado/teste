@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace SharedToolBox.Domain.Interfaces.Services
 {
@@ -7,9 +9,10 @@ namespace SharedToolBox.Domain.Interfaces.Services
         void Add(TEntity obj);
         TEntity GetById(int id);
         IEnumerable<TEntity> GetAll();
-        IEnumerable<TEntity> GetOnlyActive();
+        IList<TEntity> GetOnlyActive();
         void Update(int id, TEntity obj);
         void Remove(TEntity obj);
+        IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
         void Dispose();
     }
 }

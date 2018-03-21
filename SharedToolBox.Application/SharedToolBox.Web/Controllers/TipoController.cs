@@ -27,6 +27,7 @@ namespace SharedToolBox.Web.Controllers
         {
             try
             {
+                ViewBag.Categorias = (Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.Find(x => x.Ativo.Equals(true))));
                 var model = Mapper.Map<IEnumerable<Tipo>, IEnumerable<TipoViewModel>>(_tipoApp.GetAll());
                 return View(model);
             }
@@ -59,7 +60,7 @@ namespace SharedToolBox.Web.Controllers
                     Ativo = true
                 };
 
-                ViewBag.Categorias = Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.GetOnlyActive());
+                ViewBag.Categorias = (Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.Find(x => x.Ativo.Equals(true))));
 
                 return View(model);
             }
@@ -78,15 +79,26 @@ namespace SharedToolBox.Web.Controllers
 
                 HttpPostedFileBase file = Request.Files["ImageData"];
 
-                if (file.IsImage())
+                if (file.ContentLength != 0)
                 {
-                    Tipo.Imagem = file.ConvertToBytes();
-                    Tipo.ContentType = file.ContentType;
-                    Tipo.NomeArquivo = file.FileName;
+                    if (file.IsImage())
+                    {
+                        Tipo.Imagem = file.ConvertToBytes();
+                        Tipo.ContentType = file.ContentType;
+                        Tipo.NomeArquivo = file.FileName;
+                    }
+                    else
+                    {
+                        throw new Exception("Erro: Não é possível vincular arquivos que não sejam imagens.");
+                    }
                 }
-                else
+                else if (!model.Codigo.Equals(0))
                 {
-                    throw new Exception("Erro: Não é possível vincular arquivos que não seja imagens.");
+                    var image = Mapper.Map<Tipo, TipoViewModel>(_tipoApp.GetById(model.Codigo));
+
+                    Tipo.ContentType = image.ContentType;
+                    Tipo.NomeArquivo = image.NomeArquivo;
+                    Tipo.Imagem = image.Imagem;
                 }
 
                 if (model.Codigo.Equals(0))
@@ -129,7 +141,7 @@ namespace SharedToolBox.Web.Controllers
             try
             {
                 var model = Mapper.Map<Tipo, TipoViewModel>(_tipoApp.GetById(id));
-                ViewBag.Categorias = Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.GetOnlyActive());
+                ViewBag.Categorias = (Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.Find(x => x.Ativo.Equals(true))));
                 return View(model);
             }
             catch (Exception ex)
