@@ -37,6 +37,31 @@ namespace SharedToolBox.Web
             container.Register<ITipoService, TipoService>(Lifestyle.Singleton);
             container.Register<ITipoAppService, TipoAppService>(Lifestyle.Singleton);
 
+            container.Register<IRepositoryBase<Subtipo>, RepositoryBase<Subtipo>>(Lifestyle.Singleton);
+            container.Register<ISubtipoRepository, SubtipoRepository>(Lifestyle.Singleton);
+            container.Register<ISubtipoService, SubtipoService>(Lifestyle.Singleton);
+            container.Register<ISubtipoAppService, SubtipoAppService>(Lifestyle.Singleton);
+
+            container.Register<IRepositoryBase<Marca>, RepositoryBase<Marca>>(Lifestyle.Singleton);
+            container.Register<IMarcaRepository, MarcaRepository>(Lifestyle.Singleton);
+            container.Register<IMarcaService, MarcaService>(Lifestyle.Singleton);
+            container.Register<IMarcaAppService, MarcaAppService>(Lifestyle.Singleton);
+
+            container.Register<IRepositoryBase<Caracteristica>, RepositoryBase<Caracteristica>>(Lifestyle.Singleton);
+            container.Register<ICaracteristicaRepository, CaracteristicaRepository>(Lifestyle.Singleton);
+            container.Register<ICaracteristicaService, CaracteristicaService>(Lifestyle.Singleton);
+            container.Register<ICaracteristicaAppService, CaracteristicaAppService>(Lifestyle.Singleton);
+
+            container.Register<IRepositoryBase<Dominio>, RepositoryBase<Dominio>>(Lifestyle.Singleton);
+            container.Register<IDominioRepository, DominioRepository>(Lifestyle.Singleton);
+            container.Register<IDominioService, DominioService>(Lifestyle.Singleton);
+            container.Register<IDominioAppService, DominioAppService>(Lifestyle.Singleton);
+
+            container.Register<IRepositoryBase<Ferramenta>, RepositoryBase<Ferramenta>>(Lifestyle.Singleton);
+            container.Register<IFerramentaRepository, FerramentaRepository>(Lifestyle.Singleton);
+            container.Register<IFerramentaService, FerramentaService>(Lifestyle.Singleton);
+            container.Register<IFerramentaAppService, FerramentaAppService>(Lifestyle.Singleton);
+
             container.Verify();
             DependencyResolver.SetResolver(new SimpleInjectorDependencyResolver(container));
         }

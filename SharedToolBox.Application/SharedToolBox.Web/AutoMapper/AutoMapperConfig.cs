@@ -12,6 +12,11 @@ namespace SharedToolBox.Web.AutoMapper
             {
                 x.CreateMap<Categoria, CategoriaViewModel>().ReverseMap();
                 x.CreateMap<Tipo, TipoViewModel>().ReverseMap();
+                x.CreateMap<Subtipo, SubtipoViewModel>().ReverseMap();
+                x.CreateMap<Marca, MarcaViewModel>().ReverseMap();
+                x.CreateMap<Ferramenta, FerramentaViewModel>().ReverseMap();
+                x.CreateMap<Dominio, DominioViewModel>().ReverseMap();
+                x.CreateMap<Caracteristica, CaracteristicaViewModel>().ReverseMap();
             });
         }
     }

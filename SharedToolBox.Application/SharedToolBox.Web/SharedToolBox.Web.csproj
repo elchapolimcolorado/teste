@@ -229,6 +229,7 @@
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\SubtipoController.cs" />
     <Compile Include="Controllers\TipoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -264,7 +265,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Models\CategoriaViewModel.cs" />
-    <Compile Include="Models\ClienteViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\build\css\custom.css" />
@@ -831,6 +831,7 @@
     <Content Include="assets\images\user.png" />
     <Content Include="assets\images\visa.png" />
     <Content Include="assets\js\app.js" />
+    <Content Include="assets\js\application\subtipo.js" />
     <Content Include="assets\js\application\tipo.js" />
     <Content Include="assets\js\application\categoria.js" />
     <Content Include="assets\js\application\home\index.js" />
@@ -7098,6 +7099,9 @@
     <Content Include="Views\Tipo\Editar.cshtml" />
     <Content Include="Views\Tipo\Index.cshtml" />
     <Content Include="Views\Tipo\Novo.cshtml" />
+    <Content Include="Views\Subtipo\Editar.cshtml" />
+    <Content Include="Views\Subtipo\Index.cshtml" />
+    <Content Include="Views\Subtipo\Novo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -7106,7 +7110,6 @@
     <Folder Include="Views\Dominio\" />
     <Folder Include="Views\Ferramenta\" />
     <Folder Include="Views\Marca\" />
-    <Folder Include="Views\Subtipo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

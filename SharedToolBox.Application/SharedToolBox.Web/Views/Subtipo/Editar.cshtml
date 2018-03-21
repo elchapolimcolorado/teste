@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Subtipo";
+    Layout = "~/Views/Shared/_layoutMaster.cshtml";
+    @model SharedToolBox.Web.Models.SubtipoViewModel
+}
+@section scripts
+{
+    <script type="text/javascript" src="~/assets/js/application/subtipo.js"></script>
+    <!-- iCheck -->
+    <script src="~/assets/vendors/iCheck/icheck.min.js"></script>
+}
+<style>
+    .table-responsive td, .table-responsive th {
+        text-align: center
+    }
+</style>
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Cadastro de Subtipo</h3>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="clearfix"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel tela">
+                    <div class="x_title">
+                        <h2>Dados principais</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div id="erro-pai" class="alert alert-danger alert-dismissible fade in hide" role="alert">
+                            <strong>Por favor!</strong> Adicione um produto principal para fazer a associação.
+                        </div>
+                        <div id="erro-filho" class="alert alert-danger alert-dismissible fade in hide" role="alert">
+                            <strong>Por favor!</strong> Adicione ao menos um produto relacionado para fazer a associação.
+                        </div>
+                        <br />
+                        @using (Html.BeginForm("Salvar", "Subtipo", FormMethod.Post, new { @class = "form-horizontal form-label-left", enctype = "multipart/form-data" }))
+                        {
+                            @Html.HiddenFor(model => model.Codigo)
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="url-pai">
+                                    Nome: <span class="required">*</span>
+                                </label>
+                                <div class="item col-md-6 col-sm-6 col-xs-12">
+                                    <div class="input-group">
+                                        @Html.TextBoxFor(model => model.Nome, new { @class = "form-control", @placeholder = "Nome", @required = "required", @maxlength = "150" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="url-pai">
+                                    Tipo: <span class="required">*</span>
+                                </label>
+                                <div class="item col-md-6 col-sm-6 col-xs-12">
+                                    <div class="input-group">
+                                        @Html.DropDownListFor(model => model.CodigoTipo, new SelectList(ViewBag.Tipos as System.Collections.IEnumerable, "Codigo", "Nome"), "Selecione", new { @class = "form-control", @required = "required" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="url-pai">
+                                    Imagem: <span class="required">*</span>
+                                </label>
+                                <div class="item col-md-6 col-sm-6 col-xs-12">
+                                    <div class="input-group">
+                                        @Html.HiddenFor(model => model.ContentType)
+                                        @Html.HiddenFor(model => model.NomeArquivo)
+                                        <input id="ImageData" name="ImageData" type="file" class="dz-filename">
+                                    </div>
+                                    <div class="input-group">
+                                        <img src="/Subtipo/RetrieveImage/@Model.Codigo" alt="" height=100 width=200 />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="url-pai">
+                                    Ativo: <span class="required">*</span>
+                                </label>
+                                <div class="item col-md-6 col-sm-6 col-xs-12">
+                                    <div class="input-group">
+                                        @Html.CheckBoxFor(model => model.Ativo, new { @class = "checkbox" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ln_solid"></div>
+                            <div class="form-group">
+                                <div class="col-md-3 col-md-offset-9">
+                                    <a href="~/Subtipo/Index" class="btn btn-dark">Voltar</a>
+                                    <button type="submit" id="salvar" class="btn btn-success salvar">Salvar</button>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
