@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Dominio";
+    Layout = "~/Views/Shared/_layoutMaster.cshtml";
+    @model SharedToolBox.Web.Models.DominioViewModel
+}
+@section scripts
+{
+    <script type="text/javascript" src="~/assets/js/application/dominio.js"></script>
+    <!-- iCheck -->
+    <script src="~/assets/vendors/iCheck/icheck.min.js"></script>
+}
+<style>
+    .table-responsive td, .table-responsive th {
+        text-align: center
+    }
+</style>
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Cadastro de Dominio</h3>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="clearfix"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel tela">
+                    <div class="x_title">
+                        <h2>Dados principais</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div id="erro-pai" class="alert alert-danger alert-dismissible fade in hide" role="alert">
+                            <strong>Por favor!</strong> Adicione um produto principal para fazer a associação.
+                        </div>
+                        <div id="erro-filho" class="alert alert-danger alert-dismissible fade in hide" role="alert">
+                            <strong>Por favor!</strong> Adicione ao menos um produto relacionado para fazer a associação.
+                        </div>
+                        <br />
+                        @using (Ajax.BeginForm("Salvar", "Dominio", null,
+                            new AjaxOptions() { HttpMethod = "post" },
+                            new { @class = "form-horizontal form-label-left", enctype = "multipart/form-data" }))
+                        {
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="url-pai">
+                                    Grupo: <span class="required">*</span>
+                                </label>
+                                <div class="item col-md-6 col-sm-6 col-xs-12">
+                                    <div class="input-group">
+                                        @Html.TextBoxFor(model => model.Grupo, new { @class = "form-control", @required = "required", @maxlength = "150" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="url-pai">
+                                    Chave: <span class="required">*</span>
+                                </label>
+                                <div class="item col-md-6 col-sm-6 col-xs-12">
+                                    <div class="input-group">
+                                        @Html.TextBoxFor(model => model.Chave, new { @class = "form-control", @required = "required", @maxlength = "150" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="url-pai">
+                                    Valor: <span class="required">*</span>
+                                </label>
+                                <div class="item col-md-6 col-sm-6 col-xs-12">
+                                    <div class="input-group">
+                                        @Html.TextBoxFor(model => model.Valor, new { @class = "form-control", @required = "required", @maxlength = "150" })
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="url-pai">
+                                    Ativo: <span class="required">*</span>
+                                </label>
+                                <div class="item col-md-6 col-sm-6 col-xs-12">
+                                    <div class="input-group">
+                                        @Html.CheckBoxFor(model => model.Ativo, new { @class = "checkbox" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ln_solid"></div>
+                            <div class="form-group">
+                                <div class="col-md-3 col-md-offset-9">
+                                    <a href="~/Dominio/Index" class="btn btn-dark">Voltar</a>
+                                    <button type="submit" id="salvar" class="btn btn-success salvar">Salvar</button>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
