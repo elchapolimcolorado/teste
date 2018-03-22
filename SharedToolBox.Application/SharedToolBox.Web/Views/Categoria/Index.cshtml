@@ -39,6 +39,7 @@
                                 <thead>
                                     <tr>
                                         <th>Nome</th>
+                                        <th>Ativo?</th>
                                         <th>Ações</th>
                                     </tr>
                                 </thead>
@@ -47,6 +48,9 @@
                                 {
                                     <tr>
                                         <td>@item.Nome</td>
+                                        <td>
+                                            @Html.CheckBox("chk", item.Ativo, new { @disabled = "disabled" })
+                                        </td>
                                         <td>
                                             <a href="~/Categoria/Editar?id=@item.Codigo">Editar | </a>
                                             <a href="#" class="inativar" data-id="@item.Codigo">Excluir</a>

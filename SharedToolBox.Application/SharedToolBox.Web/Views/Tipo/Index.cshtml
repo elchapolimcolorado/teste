@@ -40,6 +40,7 @@
                                     <tr>
                                         <th>Nome</th>
                                         <th>Categoria</th>
+                                        <th>Ativo?</th>
                                         <th>Ações</th>
                                     </tr>
                                 </thead>
@@ -50,6 +51,9 @@
                                         <td>@item.Nome</td>
                                         <td>
                                             @Html.DropDownList("ddl" + item.CodigoCategoria, new SelectList(ViewBag.Categorias as System.Collections.IEnumerable, "Codigo", "Nome").Where(x => x.Value.ToString().Equals(item.CodigoCategoria.ToString())), new { @disabled = "disabled" })
+                                        </td>
+                                        <td>
+                                            @Html.CheckBox("chk", item.Ativo, new { @disabled = "disabled" })
                                         </td>
                                         <td>
                                             <a href="~/Tipo/Editar?id=@item.Codigo">Editar | </a>

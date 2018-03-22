@@ -224,6 +224,8 @@
     <Compile Include="Controllers\Base\BaseController.cs" />
     <Compile Include="Controllers\Base\BaseGridController.cs" />
     <Compile Include="Controllers\Base\ExternaController.cs" />
+    <Compile Include="Controllers\DominioController.cs" />
+    <Compile Include="Controllers\MarcaController.cs" />
     <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
@@ -831,6 +833,10 @@
     <Content Include="assets\images\user.png" />
     <Content Include="assets\images\visa.png" />
     <Content Include="assets\js\app.js" />
+    <Content Include="assets\js\application\ferramenta.js" />
+    <Content Include="assets\js\application\dominio.js" />
+    <Content Include="assets\js\application\caracteristica.js" />
+    <Content Include="assets\js\application\marca.js" />
     <Content Include="assets\js\application\subtipo.js" />
     <Content Include="assets\js\application\tipo.js" />
     <Content Include="assets\js\application\categoria.js" />
@@ -7102,14 +7108,18 @@
     <Content Include="Views\Subtipo\Editar.cshtml" />
     <Content Include="Views\Subtipo\Index.cshtml" />
     <Content Include="Views\Subtipo\Novo.cshtml" />
+    <Content Include="Views\Marca\Editar.cshtml" />
+    <Content Include="Views\Marca\Index.cshtml" />
+    <Content Include="Views\Marca\Novo.cshtml" />
+    <Content Include="Views\Dominio\Editar.cshtml" />
+    <Content Include="Views\Dominio\Index.cshtml" />
+    <Content Include="Views\Dominio\Novo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="assets\js\application\categoria\" />
     <Folder Include="Views\Caracteristica\" />
-    <Folder Include="Views\Dominio\" />
     <Folder Include="Views\Ferramenta\" />
-    <Folder Include="Views\Marca\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
