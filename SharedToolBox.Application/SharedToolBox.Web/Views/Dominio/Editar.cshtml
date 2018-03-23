@@ -48,6 +48,7 @@
                                     <div class="item col-md-6 col-sm-6 col-xs-12">
                                         <div class="input-group">
                                             @Html.TextBoxFor(model => model.Grupo, new { @class = "form-control", @required = "required", @maxlength = "150" })
+                                            @Html.DropDownListFor(model => model.Grupo, new SelectList(ViewBag.Grupos as System.Collections.IEnumerable, "Grupo", "Grupo"), "Selecione", new { @class = "form-control", @required = "required" })
                                         </div>
                                     </div>
                                 </div>
@@ -69,7 +70,7 @@
                                     </label>
                                     <div class="item col-md-6 col-sm-6 col-xs-12">
                                         <div class="input-group">
-                                            @Html.TextBoxFor(model => model.Valor, new { @class = "form-control", @required = "required", @maxlength = "150" })
+                                            @Html.TextBoxFor(model => model.Valor, new { @class = "form-control", @maxlength = "150" })
                                         </div>
                                     </div>
                                 </div>
