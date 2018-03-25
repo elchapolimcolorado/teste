@@ -52,6 +52,7 @@ namespace SharedToolBox.Web.Controllers
         {
             try
             {
+                ViewBag.Grupos = (Mapper.Map<IEnumerable<Dominio>, IEnumerable<DominioViewModel>>(_dominioApp.GetAll()));
                 var model = new DominioViewModel() { Ativo = true };
                 return View(model);
             }
@@ -88,6 +89,7 @@ namespace SharedToolBox.Web.Controllers
         {
             try
             {
+                ViewBag.Grupos = (Mapper.Map<IEnumerable<Dominio>, IEnumerable<DominioViewModel>>(_dominioApp.GetAll()));
                 var model = Mapper.Map<Dominio, DominioViewModel>(_dominioApp.GetById(id));
                 return View(model);
             }
