@@ -5,6 +5,7 @@ using SharedToolBox.Web.Helpers;
 using SharedToolBox.Web.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
@@ -52,7 +53,11 @@ namespace SharedToolBox.Web.Controllers
         {
             try
             {
-                ViewBag.Grupos = (Mapper.Map<IEnumerable<Dominio>, IEnumerable<DominioViewModel>>(_dominioApp.GetAll()));
+                IEnumerable<Dominio> filteredList = _dominioApp.ListAll().GroupBy(x => x.Grupo)
+                    .Select(group => group.First());
+
+                ViewBag.Grupos = filteredList;
+
                 var model = new DominioViewModel() { Ativo = true };
                 return View(model);
             }
@@ -89,7 +94,11 @@ namespace SharedToolBox.Web.Controllers
         {
             try
             {
-                ViewBag.Grupos = (Mapper.Map<IEnumerable<Dominio>, IEnumerable<DominioViewModel>>(_dominioApp.GetAll()));
+                IEnumerable<Dominio> filteredList = _dominioApp.ListAll().GroupBy(x => x.Grupo)
+                    .Select(group => group.First());
+
+                ViewBag.Grupos = filteredList;
+
                 var model = Mapper.Map<Dominio, DominioViewModel>(_dominioApp.GetById(id));
                 return View(model);
             }

@@ -29,21 +29,9 @@ namespace SharedToolBox.Infra.Data.Repositories
             return Db.Set<TEntity>().ToList();
         }
 
-        public IList<TEntity> GetOnlyActive()
+        public IList<TEntity> ListAll()
         {
             return Db.Set<TEntity>().ToList();
-            //  .Where(x => x.GetType().GetField("ATIVO").GetValue(x).Equals(true)).ToList();
-
-            //var expr = SelectExpression<TEntity, bool>("ATIVO");
-
-            //return Db.Set<TEntity>().Where(SelectExpression<TEntity, bool>("ATIVO")).ToList();
-
-            /*
-            var props = GetType().GetProperties()
-                .Where(p => p.PropertyType.Name.Equals("ATIVO").Equals(true));
-
-            return Db.Set<TEntity>().Where(x => props.Equals(true)).ToList();
-            */
         }
 
         //public Expression<Func<TItem, bool>> IsActive()

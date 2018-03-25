@@ -78,15 +78,15 @@
             });
         },
         disablefield: function (e) {
-            $("#txtGrupo").attr("value", "");
-            $("#ddlGrupo").attr("selectedIndex", "-1");
+            $("#txtGrupo")[0].value = '';
+            $("#ddlGrupo")[0].selectedIndex = 0;
 
             if (document.getElementById('novoGrupo').checked == 1) { 
-                $("#txtGrupo").attr("disabled", false);
-                $("#ddlGrupo").attr("disabled", true);
-            } else {
                 $("#txtGrupo").attr("disabled", true);
                 $("#ddlGrupo").attr("disabled", false);
+            } else {
+                $("#txtGrupo").attr("disabled", false);
+                $("#ddlGrupo").attr("disabled", true);
             }
         } 
     };

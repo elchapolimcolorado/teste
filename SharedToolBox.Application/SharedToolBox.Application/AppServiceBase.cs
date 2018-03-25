@@ -32,9 +32,9 @@ namespace SharedToolBox.Application
             return _serviceBase.GetAll();
         }
 
-        public IList<TEntity> GetOnlyActive()
+        public IList<TEntity> ListAll()
         {
-            return _serviceBase.GetOnlyActive();
+            return _serviceBase.ListAll();
         }
 
         public void Update(int id, TEntity obj)

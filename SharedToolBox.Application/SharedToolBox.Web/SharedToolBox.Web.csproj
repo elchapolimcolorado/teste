@@ -7096,7 +7096,6 @@
     <Content Include="Views\Produtos\Details.cshtml" />
     <Content Include="Views\Produtos\Edit.cshtml" />
     <Content Include="Views\Produtos\Index.cshtml" />
-    <Content Include="Views\Home\Index1.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="tsconfig.json" />
     <Content Include="Views\Categoria\Index.cshtml" />
@@ -7118,7 +7117,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="assets\js\application\categoria\" />
-    <Folder Include="Views\Caracteristica\" />
     <Folder Include="Views\Ferramenta\" />
   </ItemGroup>
   <ItemGroup>

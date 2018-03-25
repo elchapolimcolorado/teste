@@ -30,9 +30,9 @@ namespace SharedToolBox.Domain.Services
             return _repository.GetAll();
         }
 
-        public IList<TEntity> GetOnlyActive()
+        public IList<TEntity> ListAll()
         {
-            return _repository.GetOnlyActive();
+            return _repository.ListAll();
         }
 
         public void Update(int id, TEntity obj)
