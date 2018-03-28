@@ -225,6 +225,7 @@
     <Compile Include="Controllers\Base\BaseGridController.cs" />
     <Compile Include="Controllers\Base\ExternaController.cs" />
     <Compile Include="Controllers\DominioController.cs" />
+    <Compile Include="Controllers\FerramentaController.cs" />
     <Compile Include="Controllers\MarcaController.cs" />
     <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
