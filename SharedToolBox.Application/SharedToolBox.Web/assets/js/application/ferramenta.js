@@ -38,8 +38,39 @@
                 "Codigo": "1", "Nome": "teste", "NomeArquivo": "", "ContentType": "", "DataManipulacao": "", "Ativo": "", "LoginManipulacao": "", "Imagem": ""
             };
             main.post(model, 'Ferramenta/Salvar', view.sucessoAoSalvar, view.erroAoSalvar);
+        },
+        preencherTipo: function () {
+            var codigo = $('#ddlCategoria').val();
+            $.ajax({
+                url: '/Ferramenta/BuscarTipo',
+                type: "GET",
+                dataType: "JSON",
+                data: { codigoCategoria: codigo },
+                success: function (tipos) {
+                    $("#ddlTipo").html("");
+                    $.each(tipos, function (i, tipo) {
+                        $("#ddlTipo").append(
+                            $('<option></option>').val(tipo.Codigo).html(tipo.Nome));
+                    });
+                }
+            });
+        },
+        preencherSubTipo: function () {
+            var codigo = $('#ddlTipo').val();
+            $.ajax({
+                url: '/Ferramenta/BuscarSubTipo',
+                type: "GET",
+                dataType: "JSON",
+                data: { codigoTipo: codigo },
+                success: function (subtipos) {
+                    $("#ddlSubTipo").html("");
+                    $.each(subtipos, function (i, subtipo) {
+                        $("#ddlSubTipo").append(
+                            $('<option></option>').val(subtipo.Codigo).html(subtipo.Nome));
+                    });
+                }
+            });
         }
-        
     };
     var view = {
         erroGenerico: function (e) { console.log(e); },

@@ -15,15 +15,21 @@ namespace SharedToolBox.Web.Controllers
     {
         private readonly IFerramentaAppService _ferramentaApp;
         private readonly IMarcaAppService _marcaApp;
+        private readonly ICategoriaAppService _categoriaApp;
+        private readonly ITipoAppService _tipoApp;
         private readonly ISubtipoAppService _subtipoApp;
 
         public FerramentaController(IMarcaAppService MarcaApp,
             ISubtipoAppService SubtipoApp,
-            IFerramentaAppService FerramentaApp)
+            IFerramentaAppService FerramentaApp,
+            ICategoriaAppService CategoriaApp,
+            ITipoAppService TipoApp)
         {
             _ferramentaApp = FerramentaApp;
             _marcaApp = MarcaApp;
             _subtipoApp = SubtipoApp;
+            _categoriaApp = CategoriaApp;
+            _tipoApp = TipoApp;
         }
 
         [HttpGet]
@@ -56,10 +62,43 @@ namespace SharedToolBox.Web.Controllers
         }
 
         [HttpGet]
+        public ActionResult BuscarTipo(int codigoCategoria)
+        {
+            try
+            {
+                var tipos = _tipoApp.Find(x => x.CodigoCategoria.Equals(codigoCategoria));
+                return Json(tipos, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Json(string.Format("Erro: {0}", ex.Message), JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        [HttpGet]
+        public ActionResult BuscarSubTipo(int codigoTipo)
+        {
+            try
+            {
+                var subtipos = _subtipoApp.Find(x => x.CodigoTipo.Equals(codigoTipo));
+                return Json(subtipos, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Json(string.Format("Erro: {0}", ex.Message), JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        [HttpGet]
         public ActionResult Novo()
         {
             try
             {
+                ViewBag.Categorias = (Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApp.Find(x => x.Ativo.Equals(true))));
+                ViewBag.Marcas = (Mapper.Map<IEnumerable<Marca>, IEnumerable<MarcaViewModel>>(_marcaApp.Find(x => x.Ativo.Equals(true))));
+                ViewBag.Tipos = (Mapper.Map<IEnumerable<Tipo>, IEnumerable<TipoViewModel>>(_tipoApp.Find(x => x.Ativo.Equals(true))));
+                ViewBag.Subtipos = (Mapper.Map<IEnumerable<Subtipo>, IEnumerable<SubtipoViewModel>>(_subtipoApp.Find(x => x.Ativo.Equals(true))));
+
                 var model = new FerramentaViewModel()
                 {
                     Ativo = true
@@ -145,6 +184,9 @@ namespace SharedToolBox.Web.Controllers
         {
             try
             {
+                ViewBag.Marcas = (Mapper.Map<IEnumerable<Marca>, IEnumerable<MarcaViewModel>>(_marcaApp.Find(x => x.Ativo.Equals(true))));
+                ViewBag.Subtipos = (Mapper.Map<IEnumerable<Subtipo>, IEnumerable<SubtipoViewModel>>(_subtipoApp.Find(x => x.Ativo.Equals(true))));
+
                 var model = Mapper.Map<Ferramenta, FerramentaViewModel>(_ferramentaApp.GetById(id));
                 ViewBag.Marcas = (Mapper.Map<IEnumerable<Marca>, IEnumerable<MarcaViewModel>>(_marcaApp.Find(x => x.Ativo.Equals(true))));
                 return View(model);

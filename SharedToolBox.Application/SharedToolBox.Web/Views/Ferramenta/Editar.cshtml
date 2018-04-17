@@ -1,11 +1,11 @@
 ﻿@{
-    ViewBag.Title = "Dominio";
+    ViewBag.Title = "Ferramenta";
     Layout = "~/Views/Shared/_layoutMaster.cshtml";
-    @model SharedToolBox.Web.Models.DominioViewModel
+    @model SharedToolBox.Web.Models.FerramentaViewModel
 }
 @section scripts
 {
-    <script type="text/javascript" src="~/assets/js/application/dominio.js"></script>
+    <script type="text/javascript" src="~/assets/js/application/Ferramenta.js"></script>
     <!-- iCheck -->
     <script src="~/assets/vendors/iCheck/icheck.min.js"></script>
 }
@@ -18,7 +18,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Cadastro de Dominio</h3>
+                <h3>Cadastro de Ferramenta</h3>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -38,7 +38,7 @@
                             <strong>Por favor!</strong> Adicione ao menos um produto relacionado para fazer a associação.
                         </div>
                         <br />
-                        @using (Html.BeginForm("Salvar", "Dominio", FormMethod.Post, new { @class = "form-horizontal form-label-left", enctype = "multipart/form-data" }))
+                        @using (Html.BeginForm("Salvar", "Ferramenta", FormMethod.Post, new { @class = "form-horizontal form-label-left", enctype = "multipart/form-data" }))
     {
                     @Html.HiddenFor(model => model.Codigo)
 
@@ -98,7 +98,7 @@
                     <div class="ln_solid"></div>
                     <div class="form-group">
                         <div class="col-md-3 col-md-offset-9">
-                            <a href="~/Dominio/Index" class="btn btn-dark">Voltar</a>
+                            <a href="~/Ferramenta/Index" class="btn btn-dark">Voltar</a>
                             <button type="submit" id="salvar" class="btn btn-success salvar">Salvar</button>
                         </div>
                     </div>

@@ -3290,6 +3290,7 @@
     <Content Include="Scripts\handlebars.runtime.amd.min.js" />
     <Content Include="Scripts\handlebars.runtime.js" />
     <Content Include="Scripts\handlebars.runtime.min.js" />
+    <None Include="Properties\PublishProfiles\SharedToolBoxWeb20180403103913 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -7114,11 +7115,13 @@
     <Content Include="Views\Dominio\Editar.cshtml" />
     <Content Include="Views\Dominio\Index.cshtml" />
     <Content Include="Views\Dominio\Novo.cshtml" />
+    <Content Include="Views\Ferramenta\Editar.cshtml" />
+    <Content Include="Views\Ferramenta\Index.cshtml" />
+    <Content Include="Views\Ferramenta\Novo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="assets\js\application\categoria\" />
-    <Folder Include="Views\Ferramenta\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
