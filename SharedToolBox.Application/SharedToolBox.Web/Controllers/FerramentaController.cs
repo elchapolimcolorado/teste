@@ -5,6 +5,7 @@ using SharedToolBox.Web.Helpers;
 using SharedToolBox.Web.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
@@ -67,6 +68,7 @@ namespace SharedToolBox.Web.Controllers
             try
             {
                 var tipos = _tipoApp.Find(x => x.CodigoCategoria.Equals(codigoCategoria));
+                tipos.ToList().Insert(0, new Tipo() { Codigo = 0, Ativo = true, Nome = "Selecione" });
                 return Json(tipos, JsonRequestBehavior.AllowGet);
             }
             catch (Exception ex)
@@ -81,6 +83,7 @@ namespace SharedToolBox.Web.Controllers
             try
             {
                 var subtipos = _subtipoApp.Find(x => x.CodigoTipo.Equals(codigoTipo));
+                subtipos.ToList().Add(new Subtipo() { Codigo = 0, Ativo = true, Nome = "Selecione" });
                 return Json(subtipos, JsonRequestBehavior.AllowGet);
             }
             catch (Exception ex)
