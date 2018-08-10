@@ -17,7 +17,7 @@
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile>~/Views/Shared/_layoutMaster.cshtml</WebStackScaffolding_LayoutPageFile>
     <ProjectView>ProjectFiles</ProjectView>
-    <ToolsVersionPromptShown>2.3</ToolsVersionPromptShown>
+    <ToolsVersionPromptShown>2.5</ToolsVersionPromptShown>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
     <NameOfLastUsedPublishProfile>SharedToolBoxWeb20180403103913 - Web Deploy</NameOfLastUsedPublishProfile>
